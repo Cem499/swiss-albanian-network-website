@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gönner*in werden Studierende</title>
+    <link rel="icon" type="image/webp" href="logo-san.webp">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Sora', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: #111;
+
+        }
+
+        .Logo-div-Nav {
+            text-decoration: none;
+            border: none;
+        }
+
+        .Logo-a {
+            text-decoration: none;
+            border: none !important;
+        }
+
+        .Logo-a:hover {
+            border-bottom: none !important;
+        }
+
+        .gönner-balken {
+            position: fixed;
+            right: 0;
+            top: 65%;
+            transform: translateY(-50%);
+            background: #bd1a20;
+            color: #fff;
+            text-decoration: none;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            font-weight: 600;
+            width: 60px;
+            height: auto;
+            min-height: 160px;
+            padding: 24px 0;
+            margin: 0;
+            border-radius: 10px 0px 0px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: width 0.3s ease;
+        }
+
+        .gönner-balken span {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 18px;
+            letter-spacing: 0.2px;
+            transform: rotate(180deg);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 85px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 12px 40px;
+        }
+
+        .logo {
+            height: 75px;
+            width: auto;
+            padding-left: 30px;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 70px;
+        }
+
+        nav a:not(.Logo-a) {
+            text-decoration: none;
+            color: #000000;
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:not(.Logo-a):hover {
+            border-bottom: 2px solid #d9534f;
+        }
+
+        nav a.aktiv {
+            border-bottom: 2px solid #d9534f;
+            color: #d9534f;
+        }
+
+        .seite {
+            max-width: none;
+            margin: 0;
+            padding: 60px 0 96px;
+        }
+
+        .einleitung {
+            text-align: center;
+            margin: 0 auto 44px;
+        }
+
+        .einleitung h1 {
+            margin: 0 0 12px 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .einleitung p {
+            margin: 0;
+            font-size: 22px;
+            line-height: 1.5;
+        }
+
+        .formular-bereich {
+            background: #f6ecec;
+            padding: 44px 0 46px;
+        }
+
+        .formular-inhalt {
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        .formular-kopf {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .formular-kopf h2 {
+            margin: 0;
+            font-size: 54px;
+            font-weight: 800;
+            color: #bd1a20;
+            letter-spacing: 0.2px;
+        }
+
+        .formular-kopf p {
+            margin: 6px 0 0 0;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .stufe-kopf {
+            align-items: center;
+            gap: 18px;
+            margin: 22px 0 22px;
+        }
+
+        .stufe-kopf h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #bd1a20;
+        }
+
+        .stufe-linie {
+            height: 1px;
+            background: #bd1a20;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        .felder {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px 32px;
+            margin-bottom: 22px;
+        }
+
+        .zeile-adresse {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 22px;
+            min-width: 0;
+        }
+
+        .zeile-adresse .feld-strasse {
+            flex: 2;
+            min-width: 0;
+        }
+
+        .zeile-adresse .feld-plz,
+        .zeile-adresse .feld-stadt {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .feld input,
+        .feld select {
+            width: 100%;
+            height: 42px;
+            border: 0;
+            outline: none;
+            border-radius: 999px;
+            padding: 0 18px;
+            background: #ffffff;
+            color: #111;
+            font-size: 14px;
+        }
+
+        .feld input::placeholder {
+            color: #777;
+        }
+
+
+
+        .abschnitt-titel {
+            font-size: 14px;
+            font-weight: 700;
+            color: #222;
+            margin: 10px 0 10px;
+        }
+
+        .pflicht {
+            color: #bd1a20;
+        }
+
+        .zahlung {
+            margin: 12px 0 22px;
+        }
+
+        .zahlung .optionen {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .zahlung label,
+        .datenschutz label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .zahlung input[type="radio"] {
+            accent-color: #bd1a20;
+        }
+
+        .datenschutz {
+            margin: 0 0 18px;
+        }
+
+        .datenschutz .hinweistext {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #222;
+            max-width: 980px;
+        }
+
+        .datenschutz input[type="checkbox"] {
+            accent-color: #bd1a20;
+            margin-top: 2px;
+        }
+
+        .absenden {
+            display: inline-block;
+            background: #a84537;
+            color: #fff;
+            border: 0;
+            border-radius: 999px;
+            padding: 12px 22px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+
+
+        .Unsere-Partner h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .Unsere-Partner {
+    max-width: 1800px;
+    margin: 100px auto 100px;
+    text-align: center;
+  }
+
+  .Unsere-Partner .unterstreichung {
+    width: 750px;
+    max-width: 90%;
+    height: 3px;
+    background: #ddd6d6;
+    margin: 14px auto 8px;
+  }
+
+  .Image-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    
+    padding-bottom: 30px;
+  }
+
+  .Image-Container img {
+    max-width: 200px;
+    height: auto;
+  }
+
+        .Ganze-Footer-Unten {
+            background-color: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 32px;
+            flex-wrap: wrap;
+            padding: 18px 18px;
+        }
+
+        .Logo-Footer {
+            padding-top: 26px;
+            width: 92px;
+            height: auto;
+        }
+
+        .Footer-Links p {
+            padding-top: 12px;
+            padding-bottom: 90px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .Footer-Mitte h1 {
+            padding-top: 26px;
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .Footer-Mitte a {
+            font-size: 16px;
+            display: block;
+            margin: 6px 0;
+            color: #e5e4e4;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+
+        .Footer-Links {
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .Footer-Mitte {
+            text-align: left;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .Footer-Rechts {
+            text-align: left;
+            color: #ffffff;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .Footer-Rechts h3 {
+            padding-top: 26px;
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .Footer-Rechts p {
+            color: #e5e4e4;
+            font-size: 15px;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .Footer-Rechts p#Titel-Kontakt {
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding-top: 15px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .Footer-Rechts p#E-Mail {
+            color: #ffffff;
+            margin-top: 18px;
+        }
+
+        .Footer-Rechts p#Titel-Kontakt+p+p {
+            margin-top: 18px;
+        }
+
+        .fa-brands.fa-footer {
+            font-size: 28px;
+            color: #000000;
+            margin-right: 12px;
+            border-radius: 100%;
+            background-color: #ffffff;
+            height: 46px;
+            width: 46px;
+            padding-top: 9px;
+            padding-right: 15px;
+            transition: background-color 0.3s ease;
+            
+            padding-left: 11px;
+        }
+
+        .Rote-Balken {
+            background-color: #db0101;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            flex-wrap: wrap;
+            
+            gap: 15px;
+        }
+
+        .Balken-Links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .Balken-Mitte {
+            text-align: center;
+        }
+
+        .Balken-Rechts {
+            text-align: right;
+        }
+
+        .Balken-Rechts img {
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .formular-bereich {
+                padding: 32px 0 32px;
+            }
+
+            .formular-inhalt {
+                padding: 0 18px;
+            }
+
+            .felder {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .zeile-adresse {
+                flex-direction: column;
+            }
+
+            .formular-kopf h2 {
+                font-size: 42px;
+            }
+
+            .einleitung h1 {
+                font-size: 30px;
+            }
+        }
+
+        :root {
+            --kopfhoehe: 85px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            padding-top: var(--kopfhoehe);
+        }
+
+        .menü-button {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            margin-left: 12px;
+        }
+
+        .menü-icon {
+            position: relative;
+            width: 26px;
+            height: 2px;
+            background: #000;
+            display: block;
+            transition: background 0.2s ease;
+        }
+
+        .menü-icon::before,
+        .menü-icon::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 26px;
+            height: 2px;
+            background: #000;
+            transition: transform 0.2s ease, top 0.2s ease;
+        }
+
+        .menü-icon::before {
+            top: -8px;
+        }
+
+        .menü-icon::after {
+            top: 8px;
+        }
+
+        body.menü-offen .menü-icon {
+            background: transparent;
+        }
+
+        body.menü-offen .menü-icon::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        body.menü-offen .menü-icon::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        @media (max-width: 1024px) {
+            header nav {
+                padding: 12px 24px;
+            }
+
+            header nav ul {
+                gap: 28px;
+            }
+
+            .logo {
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gönner-balken {
+                display: none;
+            }
+
+            .menü-button {
+                display: inline-flex;
+            }
+
+            header nav {
+                padding: 12px 16px;
+            }
+
+            header nav ul {
+                position: fixed;
+                top: var(--kopfhoehe);
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 16px 18px;
+                display: none;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+                z-index: 999;
+            }
+
+            body.menü-offen header nav ul {
+                display: flex;
+            }
+
+            header nav ul li {
+                padding: 8px 0;
+            }
+
+            header nav a:not(.Logo-a) {
+                font-size: 16px;
+                padding: 10px 0;
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="Logo-div-Nav">
+                <a class="Logo-a" href="index.html">
+                    <img src="logo-san.webp" alt="Swiss Albanian Network" class="logo">
+                </a>
+            </div>
+
+
+            <button class="menü-button" id="menueButton" type="button" aria-controls="hauptmenue" aria-expanded="false"
+                aria-label="Menü öffnen">
+                <span class="menü-icon" aria-hidden="true"></span>
+            </button>
+
+            <ul id="hauptmenue">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über den Verein</a></li>
+                <li><a href="benefits.html">Vorteile</a></li>
+                <li><a href="events.html">Veranstaltungen</a></li>
+                <li><a href="Gönner-in_werden.html" class="aktiv">Gönner*in werden</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="seite">
+        <section class="einleitung">
+            <h1>Danke für deine Unterstützung!</h1>
+            <p>Die Gönnerbeiträge geben SAN eine finanzielle Sicherheit und ermöglichen dadurch eine kontinuierliche
+                Planung.<br>
+                Dafür profitierst du als Gönner*in von zahlreichen Vorteilen.</p>
+        </section>
+
+        <section class="formular-bereich">
+            <div class="formular-inhalt">
+                <div class="formular-kopf">
+                    <h2>Gönner*in werden</h2>
+                    <p>Die Gönnerbeiträge geben SAN eine finanzielle Sicherheit und<br>
+                        ermöglichen dadurch eine kontinuierliche Planung. Dafür <br>
+                        profitierst du als Gönner*in von zahlreichen Vorteilen.
+                    </p>
+                </div>
+
+                <div class="stufe-kopf">
+                    <h3>Studierende</h3>
+                    <div class="stufe-linie"></div>
+                </div>
+
+                <form>
+                    <div class="felder">
+                        <div class="feld">
+                            <select aria-label="Anrede" name="anrede" required>
+                                <option value="" selected disabled>Anrede*</option>
+                                <option value="Frau">Frau</option>
+                                <option value="Herr">Herr</option>
+                            </select>
+                        </div>
+
+                        <div class="feld">
+                            <input type="text" name="geburtsdatum" placeholder="Geburtsdatum*" inputmode="numeric"
+                                autocomplete="bday" required>
+                        </div>
+
+                        <div class="feld"><input type="text" name="vorname" placeholder="Vorname*"
+                                autocomplete="given-name" required></div>
+                        <div class="feld"><input type="text" name="nachname" placeholder="Nachname*"
+                                autocomplete="family-name" required></div>
+
+                        <div class="zeile-adresse">
+                            <div class="feld feld-strasse"><input type="text" name="strasse" placeholder="Strasse*"
+                                    autocomplete="street-address" required></div>
+                            <div class="feld feld-plz" :><input type="text" name="plz" placeholder="PLZ*"
+                                    autocomplete="postal-code" required></div>
+                            <div class="feld feld-stadt"><input type="text" name="stadt" placeholder="Stadt*"
+                                    autocomplete="address-level2" required></div>
+                        </div>
+
+                        <div class="feld"><input type="email" name="email" placeholder="E-Mail Adresse*"
+                                autocomplete="email" required></div>
+                        <div class="feld"><input type="tel" name="mobil" placeholder="Mobil*" autocomplete="tel"
+                                required></div>
+                    </div>
+
+                    <div class="zahlung">
+                        <div class="abschnitt-titel">Zahlungsart <span class="pflicht">*</span></div>
+                        <div class="optionen">
+                            <label><input type="radio" name="zahlungsart" value="Twint" required> Twint</label>
+                            <label><input type="radio" name="zahlungsart" value="E-Banking" required> E-Banking</label>
+                        </div>
+                    </div>
+
+                    <div class="datenschutz">
+                        <div class="abschnitt-titel">Datenverarbeitung <span class="pflicht">*</span></div>
+                        <label>
+                            <input type="checkbox" name="datenverarbeitung" required>
+                            <span class="hinweistext">Mit dem Absenden dieses Formulars bestätigst du, dass du damit
+                                einverstanden bist, dass wir deine Daten für die Verarbeitung der Gönnerschaft sowie zu
+                                Marketingzwecken verwenden. Deine Daten werden zu keinem Zeitpunkt an Dritte
+                                weitergegeben oder verkauft.</span>
+                        </label>
+                    </div>
+
+                    <button class="absenden" type="submit">Einreichen</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <Footer>
+
+        <section class="Unsere-Partner">
+            <h2>Unsere Partner</h2>
+            <div class="unterstreichung"></div>
+
+            <div class="Image-Container">
+                <a href="https://www.zurichnetgroup.ch/"><img src="zurichnetgroup_LOGO.png" alt="Logo-zurichnetgroup"
+                        width="275"></a>
+                <a href="https://codexo.ch/"><img src="Codexo_LOGO.png" alt="Logo-Codexo" width="275"></a>
+                <a href="https://www.exojop.ch/"><img src="exojop_LOGO.webp" alt="Logo-exojop" width="275"></a>
+                <a href="https://taulanthaxhisefa.com/"><img src="Tauland_LOGO.png" alt="Logo-Tauland" width="275"></a>
+                <img src="NamaniMedia_LOGO.png" alt="Logo-NamaniMedia" width="275">
+            </div>
+
+            <h2>Unsere Medienpartner</h2>
+            <div class="unterstreichung"></div>
+
+            <div class="Image-Container">
+                <img src="eriscom_LOGO.webp" alt="Logo-eriscom" width="275">
+                <img src="albinfo_LOGO.webp" alt="Logo-albinfo" width="275">
+            </div>
+        </section>
+        <section class="Footer-Unten">
+            <div class="Ganze-Footer-Unten">
+                <div class="Footer-Links">
+                    <img src="swiss-albanian-network-logo-final-1-Footer.webp" alt="Logo-Footer" class="Logo-Footer">
+                    <p>Eine Plattform, um alle in der Schweiz lebenden <br>Albaner zusammenzubringen</p>
+                </div>
+                <div class="Footer-Mitte">
+                    <h1>Links</h1>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Über den Verein</a>
+                    <a href="benefits.html">Vorteile</a>
+                    <a href="events.html">Veranstaltungen</a>
+                    <a href="Gönner-in_werden.html">Gönner*in werden</a>
+                </div>
+                <div class="Footer-Rechts">
+                    <h3>Soziale Medien</h3>
+                    <div class="Social-Media-Icons">
+                        <a href="https://www.instagram.com/swissalbaniannetwork/"><i
+                                class="fa-brands fa-footer fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/swiss-albanian-network/"><i
+                                class="fa-brands fa-footer fa-linkedin-in"></i></a>
+                    </div>
+                    <p id="Titel-Kontakt">Kontakt</p>
+                    <p>Swiss Albanian Network <br>8840 Einsiedeln</p>
+                    <p>+41 79 663 77 77</p>
+                    <p id="E-Mail" style="padding-bottom: 20px;">welcome@swissalbaniannetwork.ch</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="Rote-Balken">
+            <div class="Balken-Links">
+        <a href="https://swissalbaniannetwork.ch/wp-content/uploads/2024/01/Verein_Statuten.pdf">Statuten</a>|<a href="impressum.html">Impressum</a>|<a href="datenschutz.html">Datenschutz</a>
+      </div>
+            <div class="Balken-Mitte">
+         <a href="https://taulanthaxhisefa.com/" style="color: white; text-decoration: none;">Designed by T.H</a>
+            </div>
+            <div class="Balken-Rechts">
+                <a href="https://codexo.ch/"><img src="Codexo-Rotes-Balken-Logo.png" alt="Codexo-Rotes-Balken-Logo"
+                        width="30" height="auto"></a>Webseite erstellt von Codexo GmbH
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        (() => {
+            const button = document.getElementById('menueButton');
+            const menue = document.getElementById('hauptmenue');
+            if (!button || !menue) return;
+
+            const setOpen = (open) => {
+                document.body.classList.toggle('menü-offen', open);
+                button.setAttribute('aria-expanded', open ? 'true' : 'false');
+                button.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+            };
+
+            button.addEventListener('click', () => {
+                setOpen(!document.body.classList.contains('menü-offen'));
+            });
+
+            menue.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => setOpen(false));
+            });
+
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') setOpen(false);
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) setOpen(false);
+            });
+        })();
+    </script>
+</body>
+
+</html>
+

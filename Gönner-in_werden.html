@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gönner*in werden - Swiss Albanian Network</title>
+  <link rel="icon" type="image/webp" href="logo-san.webp">
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+  }
+
+  .Logo-div-Nav {
+    text-decoration: none;
+    border: none;
+  }
+
+  .Logo-a {
+    text-decoration: none;
+    border: none !important;
+  }
+
+  .Logo-a:hover {
+    border-bottom: none !important;
+  }
+  .gönner-balken {
+    position: fixed;
+    right: 0;
+    top: 65%;
+    transform: translateY(-50%);
+    background: #bd1a20;
+    color: #fff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 600;
+    width: 60px;
+    height: auto;
+    min-height: 160px;
+    padding: 24px 0;
+    margin: 0;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: width 0.3s ease;
+  }
+
+  .gönner-balken span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    transform: rotate(180deg);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 85px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 12px 40px;
+  }
+
+  .logo {
+    height: 75px;
+    width: auto;
+    padding-left: 30px;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+  }
+
+  nav a:not(.Logo-a) {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    display: inline-block;
+  }
+
+  nav a:not(.Logo-a):hover {
+    border-bottom: 2px solid #d9534f;
+  }
+
+  nav a.aktiv {
+    border-bottom: 2px solid #d9534f;
+    color: #d9534f;
+  }
+
+  .Überschrift {
+    text-align: center;
+    margin-bottom: 100px;
+    padding-top: 120px;
+  }
+
+  .Überschrift h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #000000;
+  }
+
+  .Überschrift p {
+    font-size: 25px;
+    color: #000000;
+  }
+
+  .gönner-section {
+    margin: 0 auto;
+    padding: 0 40px;
+
+  }
+
+  .gönner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .gönner-card {
+    background-color: #ffffff;
+    border-radius: 28px;
+    box-shadow: 6px 6px 15px  rgba(49, 49, 49, 0.18);
+    flex: 1 1 0;
+    padding: 46px 34px 200px;
+    text-align: center;
+    position: relative;
+  }
+
+  .gönner-card-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 22px;
+    color: #000000;
+  }
+
+  .gönner-card-price {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    color: #000000;
+  }
+
+  .gönner-card-period {
+    font-size: 18px;
+    font-weight: 500;
+    color: #bd1a20;
+  }
+
+  .gönner-card-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    transform: translateX(-50%);
+    background-color: #bd1a20;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 44px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+
+
+
+  .Unsere-Partner h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .Unsere-Partner {
+    max-width: 1800px;
+    margin: 100px auto 100px;
+    text-align: center;
+  }
+
+  .Unsere-Partner .unterstreichung {
+    width: 750px;
+    max-width: 90%;
+    height: 3px;
+    background: #ddd6d6;
+    margin: 14px auto 8px;
+  }
+
+  .Image-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    
+    padding-bottom: 30px;
+  }
+
+  .Image-Container img {
+    max-width: 200px;
+    height: auto;
+  }
+
+
+
+
+  .Ganze-Footer-Unten {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .Logo-Footer {
+    padding-top: 50px;
+    width: 125px;
+    height: auto;
+  }
+
+  .Footer-Links p {
+    padding-top: 20px;
+    padding-bottom: 200px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .Footer-Mitte h1 {
+    padding-top: 50px;
+    font-size: 25px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .Footer-Mitte a {
+    font-size: 22px;
+    display: block;
+    margin: 6px 0;
+    color: #e5e4e4;
+    text-decoration: none;
+    padding: 8px 0;
+  }
+
+
+  .Footer-Links {
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .Footer-Mitte {
+    text-align: left;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .Footer-Rechts {
+    text-align: left;
+    color: #ffffff;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .Footer-Rechts h3 {
+    padding-top: 50px;
+    font-size: 25px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .Footer-Rechts p {
+    color: #e5e4e4;
+    font-size: 20px;
+  }
+
+  .Footer-Rechts p#Titel-Kontakt {
+    font-size: 25px;
+    margin-bottom: 12px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 800;
+  }
+
+  .Footer-Rechts p#E-Mail {
+    color: #ffffff;
+  }
+
+  .fa-brands.fa-footer {
+    font-size: 40px;
+    color: #000000;
+    margin-right: 20px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    height: 65px;
+    width: 65px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    
+  }
+
+  .Rote-Balken {
+    background-color: #db0101;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    
+    gap: 15px;
+  }
+
+  .Balken-Links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+
+  .Balken-Mitte {
+    text-align: center;
+  }
+
+  .Balken-Rechts {
+    text-align: right;
+  }
+
+  .Balken-Rechts img {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+
+  
+  .Ganze-Footer-Unten {
+    gap: 32px;
+    padding: 18px 18px;
+  }
+
+  .Logo-Footer {
+    padding-top: 26px;
+    width: 92px;
+  }
+
+  .Footer-Links p {
+    padding-top: 12px;
+    padding-bottom: 90px;
+    font-size: 15px;
+  }
+
+  .Footer-Mitte h1 {
+    padding-top: 26px;
+    font-size: 20px;
+  }
+
+  .Footer-Mitte a {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .Footer-Rechts h3 {
+    padding-top: 26px;
+    font-size: 20px;
+  }
+
+  .Footer-Rechts p {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  .Footer-Rechts p#Titel-Kontakt {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .Footer-Rechts p#Titel-Kontakt+p+p {
+    margin-top: 18px;
+  }
+
+  .Footer-Rechts p#E-Mail {
+    margin-top: 18px;
+  }
+
+  .fa-brands.fa-footer {
+    font-size: 28px;
+    margin-right: 12px;
+    height: 46px;
+    width: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .Footer-Mitte a.active-footer {
+    border-bottom: 2px solid #d9534f;
+    color: #d9534f;
+  }
+
+
+  @media (max-width: 768px) {
+    .gönner-section {
+      padding: 0 20px 70px;
+    }
+
+    .gönner-flex {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+
+    .gönner-card {
+      min-height: 520px;
+      padding: 38px 26px 96px;
+    }
+
+    .gönner-card-title {
+      font-size: 24px;
+    }
+
+    .gönner-card-price {
+      font-size: 38px;
+    }
+
+    .gönner-card-period {
+      font-size: 16px;
+    }
+
+    .gönner-card-btn {
+      font-size: 18px;
+      padding: 12px 38px;
+    }
+  }
+  :root {
+    --kopfhoehe: 85px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    padding-top: var(--kopfhoehe);
+  }
+
+  .menü-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  .menü-icon {
+    position: relative;
+    width: 26px;
+    height: 2px;
+    background: #000;
+    display: block;
+    transition: background 0.2s ease;
+  }
+
+  .menü-icon::before,
+  .menü-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 2px;
+    background: #000;
+    transition: transform 0.2s ease, top 0.2s ease;
+  }
+
+  .menü-icon::before {
+    top: -8px;
+  }
+
+  .menü-icon::after {
+    top: 8px;
+  }
+
+  body.menü-offen .menü-icon {
+    background: transparent;
+  }
+
+  body.menü-offen .menü-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  body.menü-offen .menü-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 1024px) {
+    header nav {
+      padding: 12px 24px;
+    }
+
+    header nav ul {
+      gap: 28px;
+    }
+
+    .logo {
+      padding-left: 0;
+    }
+
+    .Überschrift {
+      padding-top: 96px;
+      margin-bottom: 60px;
+    }
+
+    .Überschrift p {
+      font-size: 20px;
+    }
+
+    .gönner-section {
+      padding: 0 24px;
+    }
+
+    .gönner-flex {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gönner-card {
+      flex: 1 1 320px;
+      max-width: 520px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gönner-balken {
+      display: none;
+    }
+
+    .menü-button {
+      display: inline-flex;
+    }
+
+    header nav {
+      padding: 12px 16px;
+    }
+
+    header nav ul {
+      position: fixed;
+      top: var(--kopfhoehe);
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      flex-direction: column;
+      gap: 0;
+      padding: 10px 16px 18px;
+      display: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 999;
+    }
+
+    body.menü-offen header nav ul {
+      display: flex;
+    }
+
+    header nav ul li {
+      padding: 8px 0;
+    }
+
+    header nav a:not(.Logo-a) {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 0;
+    }
+
+    .Überschrift {
+      padding-top: 84px;
+      margin-bottom: 48px;
+    }
+
+    .Überschrift h1 {
+      font-size: 30px;
+    }
+
+    .Überschrift p {
+      font-size: 18px;
+    }
+
+    .gönner-section {
+      padding: 0 16px;
+    }
+
+    .gönner-flex {
+      flex-direction: column;
+    }
+
+    .gönner-card {
+      max-width: none;
+      padding: 40px 24px 170px;
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+  <a class="gönner-balken" href="Gönner-in_werden.html"><span>Gönner*in werden</span></a>
+
+  <header>
+    <nav>
+      <div class="Logo-div-Nav">
+        <a class="Logo-a" href="index.html">
+          <img src="logo-san.webp" alt="Swiss Albanian Network" class="logo">
+        </a>
+      </div>
+
+
+      <button class="menü-button" id="menueButton" type="button" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen">
+        <span class="menü-icon" aria-hidden="true"></span>
+      </button>
+
+      <ul id="hauptmenue">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Über den Verein</a></li>
+        <li><a href="benefits.html">Vorteile</a></li>
+        <li><a href="events.html">Veranstaltungen</a></li>
+        <li><a href="Gönner-in_werden.html" class="aktiv">Gönner*in werden</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="Überschrift">
+      <h1>Danke für deine Unterstützung!</h1>
+      <p>Die Gönnerbeiträge geben SAN eine finanzielle Sicherheit und ermöglichen dadurch eine kontinuierliche <br>
+        Planung. Dafür profitierst du als Gönner*in von zahlreichen Vorteilen.</p>
+    </section>
+
+    <section class="gönner-section">
+      <div class="gönner-flex">
+        <article class="gönner-card">
+          <div class="gönner-card-title">Studierende</div>
+          <div class="gönner-card-price">CHF 25.00</div>
+          <div class="gönner-card-period">pro Jahr</div>
+          <a href="Gönerin-werden-studierende.html"><button class="gönner-card-btn" type="button">Beantragen</button></a>
+        </article>
+
+        <article class="gönner-card">
+          <div class="gönner-card-title">Angestellte</div>
+          <div class="gönner-card-price">CHF 50.00</div>
+          <div class="gönner-card-period">pro Jahr</div>
+          <a href="Gönerin-werden-angestellte.html"><button class="gönner-card-btn" type="button">Beantragen</button></a>
+        </article>
+
+        <article class="gönner-card">
+          <div class="gönner-card-title">Business</div>
+          <div class="gönner-card-price">CHF 500.00</div>
+          <div class="gönner-card-period">pro Jahr</div>
+          <a href="Gönnerin-werden-buisness.html"><button class="gönner-card-btn" type="button">Beantragen</button></a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <section class="Unsere-Partner">
+      <h2>Unsere Partner</h2>
+      <div class="unterstreichung"></div>
+
+      <div class="Image-Container">
+        <a href="https://www.zurichnetgroup.ch/"><img src="zurichnetgroup_LOGO.png" alt="Logo-zurichnetgroup"
+            width="275"></a>
+        <a href="https://codexo.ch/"><img src="Codexo_LOGO.png" alt="Logo-Codexo" width="275"></a>
+        <a href="https://www.exojop.ch/"><img src="exojop_LOGO.webp" alt="Logo-exojop" width="275"></a>
+        <a href="https://taulanthaxhisefa.com/"><img src="Tauland_LOGO.png" alt="Logo-Tauland" width="275"></a>
+        <img src="NamaniMedia_LOGO.png" alt="Logo-NamaniMedia" width="275">
+      </div>
+
+      <h2>Unsere Medienpartner</h2>
+      <div class="unterstreichung"></div>
+
+      <div class="Image-Container">
+        <img src="eriscom_LOGO.webp" alt="Logo-eriscom" width="275">
+        <img src="albinfo_LOGO.webp" alt="Logo-albinfo" width="275">
+      </div>
+    </section>
+
+
+    <section class="Footer-Unten">
+      <div class="Ganze-Footer-Unten">
+        <div class="Footer-Links">
+          <img src="swiss-albanian-network-logo-final-1-Footer.webp" alt="Logo-Footer" class="Logo-Footer">
+          <p>Eine Plattform, um alle in der Schweiz lebenden <br>Albaner zusammenzubringen</p>
+        </div>
+        <div class="Footer-Mitte">
+          <h1>Links</h1>
+          <a href="index.html">Home</a>
+          <a href="about.html">Über den Verein</a>
+          <a href="benefits.html">Vorteile</a>
+          <a href="events.html">Veranstaltungen</a>
+          <a href="Gönner-in_werden.html">Gönner*in werden</a>
+        </div>
+        <div class="Footer-Rechts">
+          <h3>Soziale Medien</h3>
+          <div class="Social-Media-Icons">
+            <a href="https://www.instagram.com/swissalbaniannetwork/"><i
+                class="fa-brands fa-footer fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/swiss-albanian-network/"><i
+                class="fa-brands fa-footer fa-linkedin-in"></i></a>
+          </div>
+          <p id="Titel-Kontakt">Kontakt</p>
+          <p>Swiss Albanian Network <br>8840 Einsiedeln</p>
+          <p>+41 79 663 77 77</p>
+          <p id="E-Mail">welcome@swissalbaniannetwork.ch</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Rote-Balken">
+      <div class="Balken-Links">
+        <a href="https://swissalbaniannetwork.ch/wp-content/uploads/2024/01/Verein_Statuten.pdf">Statuten</a>|<a href="impressum.html">Impressum</a>|<a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="Balken-Mitte">
+         <a href="https://taulanthaxhisefa.com/" style="color: white; text-decoration: none;">Designed by T.H</a>
+      </div>
+      <div class="Balken-Rechts">
+        <a href="https://codexo.ch/"><img src="Codexo-Rotes-Balken-Logo.png" alt="Codexo-Rotes-Balken-Logo" width="30"
+            height="auto"></a>Webseite erstellt von Codexo GmbH
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    (() => {
+      const button = document.getElementById('menueButton');
+      const menue = document.getElementById('hauptmenue');
+      if (!button || !menue) return;
+
+      const setOpen = (open) => {
+        document.body.classList.toggle('menü-offen', open);
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        button.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      };
+
+      button.addEventListener('click', () => {
+        setOpen(!document.body.classList.contains('menü-offen'));
+      });
+
+      menue.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) setOpen(false);
+      });
+    })();
+  </script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,814 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung</title>
+  <link rel="icon" type="image/webp" href="logo-san.webp">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+  }
+
+  .Logo-div-Nav {
+    text-decoration: none;
+    border: none;
+  }
+
+  .Logo-a {
+    text-decoration: none;
+    border: none !important;
+  }
+
+  .Logo-a:hover {
+    border-bottom: none !important;
+  }
+
+  .gönner-balken {
+    position: fixed;
+    right: 0;
+    top: 65%;
+    transform: translateY(-50%);
+    background: #bd1a20;
+    color: #fff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 600;
+    width: 60px;
+    height: auto;
+    min-height: 160px;
+    padding: 24px 0;
+    margin: 0;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: width 0.3s ease;
+  }
+
+  .gönner-balken span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    transform: rotate(180deg);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 85px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 12px 40px;
+  }
+
+  .logo {
+    height: 75px;
+    width: auto;
+    padding-left: 30px;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+  }
+
+  nav a:not(.Logo-a) {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    display: inline-block;
+  }
+
+  nav a:not(.Logo-a):hover {
+    border-bottom: 2px solid #d9534f;
+  }
+
+  nav a.aktiv {
+    border-bottom: 2px solid #d9534f;
+    color: #d9534f;
+  }
+
+
+  h1 {
+    padding-top: 20px;
+    color: #d9534f;
+    font-size: 60px;
+  }
+
+  h2 {
+    color: #d9534f;
+  }
+
+  .absatz h1,
+  .absatz h2 {
+    margin-bottom: 8px;
+    margin-top: 16px;
+    padding-left: 10px;
+  }
+  .absatz p{
+    padding-left: 10px;
+    text-align: justify;
+  }
+
+  .absatz ul {
+    margin: 10px 0 16px;
+    padding-left: 32px;
+    list-style: disc;
+  }
+
+  .absatz li {
+    margin: 8px 0;
+  }
+
+  .links {
+    color: #d9534f;
+    text-decoration: none;
+  }
+
+  .links:hover {
+    color: darkblue;
+  }
+
+   .Ganze-Footer-Unten {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+
+  .Logo-Footer {
+    padding-top: 50px;
+    width: 125px;
+    height: auto;
+  }
+
+  .Footer-Links p {
+    padding-top: 20px;
+    padding-bottom: 200px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .Footer-Mitte h1 {
+    padding-top: 50px;
+    font-size: 25px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .Footer-Mitte a {
+    font-size: 22px;
+    display: block;
+    margin: 6px 0;
+    color: #e5e4e4;
+    text-decoration: none;
+    padding: 8px 0;
+  }
+
+
+  .Footer-Links {
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .Footer-Mitte {
+    text-align: left;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .Footer-Rechts {
+    text-align: left;
+    color: #ffffff;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .Footer-Rechts h3 {
+    padding-top: 50px;
+    font-size: 25px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .Footer-Rechts p {
+    color: #e5e4e4;
+    font-size: 20px;
+  }
+
+  .Footer-Rechts p#Titel-Kontakt {
+    font-size: 25px;
+    margin-bottom: 12px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 800;
+  }
+
+  .Footer-Rechts p#E-Mail {
+    color: #ffffff;
+  }
+
+  .fa-brands.fa-footer {
+    font-size: 40px;
+    color: #000000;
+    margin-right: 20px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    height: 65px;
+    width: 65px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .Rote-Balken {
+    background-color: #db0101;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    
+    gap: 15px;
+  }
+
+  .Balken-Links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+
+  
+
+  .Balken-Mitte {
+    text-align: center;
+  }
+
+  .Balken-Rechts {
+    text-align: right;
+  }
+
+  .Balken-Rechts img {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+
+  .Ganze-Footer-Unten {
+    gap: 32px;
+    padding: 18px 18px;
+  }
+
+  .Logo-Footer {
+    padding-top: 26px;
+    width: 92px;
+  }
+
+  .Footer-Links p {
+    padding-top: 12px;
+    padding-bottom: 90px;
+    font-size: 15px;
+  }
+
+  .Footer-Mitte h1 {
+    padding-top: 26px;
+    font-size: 20px;
+  }
+
+  .Footer-Mitte a {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .Footer-Rechts h3 {
+    padding-top: 26px;
+    font-size: 20px;
+  }
+
+  .Footer-Rechts p {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  .Footer-Rechts p#Titel-Kontakt {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .Footer-Rechts p#Titel-Kontakt+p+p {
+    margin-top: 18px;
+  }
+
+  .Footer-Rechts p#E-Mail {
+    margin-top: 18px;
+  }
+
+  .fa-brands.fa-footer {
+    font-size: 28px;
+    margin-right: 12px;
+    height: 46px;
+    width: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+  }
+
+  :root {
+    --kopfhoehe: 85px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    padding-top: var(--kopfhoehe);
+  }
+
+  .menü-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  .menü-icon {
+    position: relative;
+    width: 26px;
+    height: 2px;
+    background: #000;
+    display: block;
+    transition: background 0.2s ease;
+  }
+
+  .menü-icon::before,
+  .menü-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 2px;
+    background: #000;
+    transition: transform 0.2s ease, top 0.2s ease;
+  }
+
+  .menü-icon::before {
+    top: -8px;
+  }
+
+  .menü-icon::after {
+    top: 8px;
+  }
+
+  body.menü-offen .menü-icon {
+    background: transparent;
+  }
+
+  body.menü-offen .menü-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  body.menü-offen .menü-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 1024px) {
+    header nav {
+      padding: 12px 24px;
+    }
+
+    header nav ul {
+      gap: 28px;
+    }
+
+    .logo {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gönner-balken {
+      display: none;
+    }
+
+    .menü-button {
+      display: inline-flex;
+    }
+
+    header nav {
+      padding: 12px 16px;
+    }
+
+    header nav ul {
+      position: fixed;
+      top: var(--kopfhoehe);
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      flex-direction: column;
+      gap: 0;
+      padding: 10px 16px 18px;
+      display: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 999;
+    }
+
+    body.menü-offen header nav ul {
+      display: flex;
+    }
+
+    header nav ul li {
+      padding: 8px 0;
+    }
+
+    header nav a:not(.Logo-a) {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 0;
+    }
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="Logo-div-Nav">
+        <a class="Logo-a" href="index.html">
+          <img src="logo-san.webp" alt="Swiss Albanian Network" class="logo">
+        </a>
+      </div>
+
+      <button class="menü-button" id="menueButton" type="button" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen">
+        <span class="menü-icon" aria-hidden="true"></span>
+      </button>
+
+      <ul id="hauptmenue">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Über den Verein</a></li>
+        <li><a href="benefits.html">Vorteile</a></li>
+        <li><a href="events.html">Veranstaltungen</a></li>
+        <li><a href="Gönner-in_werden.html">Gönner*in werden</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <h1>Datenschutzerklärung</h1>
+
+      <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO),
+        ist:</p>
+      <p>
+        Swiss Albanian Network<br>
+        Florent Hasani<br>
+        Postfach<br>
+        8840 Einsiedeln<br>
+        E-Mail: <a class="links" href="mailto:welcome@swissalbaniannetwork.ch">welcome@swissalbaniannetwork.ch</a><br>
+        Website: <a class="links" href="https://swissalbaniannetwork.ch/" target="_blank"
+          rel="noopener">https://swissalbaniannetwork.ch/</a>
+      </p>
+    </div>
+    <div class="absatz">
+      <h2>Allgemeiner Hinweis</h2>
+      <p>Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und den datenschutzrechtlichen Bestimmungen des
+        Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor
+        Missbrauch ihrer persönlichen Daten. Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr
+        ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
+        Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+      <p>In Zusammenarbeit mit unseren Hosting-Providern bemühen wir uns, die Datenbanken so gut wie möglich vor fremden
+        Zugriffen, Verlusten, Missbrauch oder vor Fälschung zu schützen.</p>
+      <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail)
+        Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
+        möglich.
+      </p>
+
+      <p>Durch die Nutzung dieser Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäss
+        der nachfolgenden Beschreibung einverstanden. Diese Website kann grundsätzlich ohne Registrierung besucht
+        werden.
+        Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu
+        statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen
+        werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf
+        freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte.</p>
+    </div>
+
+    <div class="absatz">
+      <h2>Bearbeitung von Personendaten</h2>
+      <p>Personendaten sind alle Angaben, die sich auf eine bestimmte oder bestimmbare Person beziehen. Eine betroffene
+        Person ist eine Person, über die Personendaten bearbeitet werden. Bearbeiten umfasst jeden Umgang mit
+        Personendaten, unabhängig von den angewandten Mitteln und Verfahren, insbesondere das Aufbewahren, Bekanntgeben,
+        Beschaffen, Löschen, Speichern, Verändern, Vernichten und Verwenden von Personendaten. Wir bearbeiten
+        Personendaten im Einklang mit dem schweizerischen Datenschutzrecht. Im Übrigen bearbeiten wir – soweit und
+        sofern
+        die EU-DSGVO anwendbar ist – Personendaten gemäss folgenden Rechtsgrundlagen im Zusammenhang mit Art. 6 Abs. 1
+        DSGVO: Einwilligung (Art. 6 Abs. 1 S. 1 lit. a. DSGVO) – Die betroffene Person hat ihre Einwilligung in die
+        Verarbeitung der sie betreffenden personenbezogenen Daten für einen spezifischen Zweck oder mehrere bestimmte
+        Zwecke gegeben. Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b. DSGVO) – Die
+        Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur
+        Durchführung vorvertraglicher Massnahmen erforderlich, die auf Anfrage der betroffenen Person erfolgen.
+        Rechtliche
+        Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c. DSGVO) – Die Verarbeitung ist zur Erfüllung einer rechtlichen
+        Verpflichtung erforderlich, der der Verantwortliche unterliegt. Schutz lebenswichtiger Interessen (Art. 6 Abs. 1
+        S. 1 lit. d. DSGVO) – Die Verarbeitung ist erforderlich, um lebenswichtige Interessen der betroffenen Person
+        oder
+        einer anderen natürlichen Person zu schützen. Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f. DSGVO) – Die
+        Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten erforderlich,
+        sofern nicht die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz
+        personenbezogener Daten erfordern, überwiegen. Bewerbungsverfahren als vorvertragliches bzw. vertragliches
+        Verhältnis (Art. 9 Abs. 2 lit. b DSGVO) – Soweit im Rahmen des Bewerbungsverfahrens besondere Kategorien von
+        personenbezogenen Daten im Sinne des Art. 9 Abs. 1 DSGVO (z.B. Gesundheitsdaten, wie
+        Schwerbehinderteneigenschaft
+        oder ethnische Herkunft) bei Bewerbern angefragt werden, damit der Verantwortliche oder die betroffene Person
+        die
+        ihm bzw. ihr aus dem Arbeitsrecht und dem Recht der sozialen Sicherheit und des Sozialschutzes erwachsenden
+        Rechte
+        ausüben und seinen bzw. ihren diesbezüglichen Pflichten nachkommen kann, erfolgt deren Verarbeitung nach Art. 9
+        Abs. 2 lit. b. DSGVO, im Fall des Schutzes lebenswichtiger Interessen der Bewerber oder anderer Personen gem.
+        Art.
+        9 Abs. 2 lit. c. DSGVO oder für Zwecke der Gesundheitsvorsorge oder der Arbeitsmedizin, für die Beurteilung der
+        Arbeitsfähigkeit des Beschäftigten, für die medizinische Diagnostik, die Versorgung oder Behandlung im
+        Gesundheits- oder Sozialbereich oder für die Verwaltung von Systemen und Diensten im Gesundheits- oder
+        Sozialbereich gem. Art. 9 Abs. 2 lit. h. DSGVO. Im Fall einer auf freiwilliger Einwilligung beruhenden
+        Mitteilung
+        von besonderen Kategorien von Daten, erfolgt deren Verarbeitung auf Grundlage von Art. 9 Abs. 2 lit. a. DSGVO.
+        Wir
+        bearbeiten Personendaten für jene Dauer, die für den jeweiligen Zweck oder die jeweiligen Zwecke erforderlich
+        ist.
+        Bei länger dauernden Aufbewahrungspflichten aufgrund von gesetzlichen und sonstigen Pflichten, denen wir
+        unterliegen, schränken wir die Bearbeitung entsprechend ein.</p>
+    </div>
+    <div class="absatz">
+      <h2>Massgebliche Rechtsgrundlagen</h2>
+      <p>Nach Massgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. Sofern
+        die
+        Rechtsgrundlage in der Datenschutzerklärung nicht genannt wird, gilt Folgendes: Die Rechtsgrundlage für die
+        Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO, die Rechtsgrundlage für die Verarbeitung
+        zur Erfüllung unserer Leistungen und Durchführung vertraglicher Massnahmen sowie Beantwortung von Anfragen ist
+        Art. 6 Abs. 1 lit. b DSGVO, die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen
+        Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, und die Rechtsgrundlage für die Verarbeitung zur Wahrung unserer
+        berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO. Für den Fall, dass lebenswichtige Interessen der
+        betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich
+        machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</p>
+    </div>
+    <div class="absatz">
+      <h2>Sicherheitsmassnahmen</h2>
+      <p>Wir treffen nach Massgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der
+        Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der
+        unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmasses der Bedrohung der Rechte und Freiheiten
+        natürlicher Personen geeignete technische und organisatorische Massnahmen, um ein dem Risiko angemessenes
+        Schutzniveau zu gewährleisten. Zu den Massnahmen gehören insbesondere die Sicherung der Vertraulichkeit,
+        Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen und elektronischen Zugangs zu den Daten
+        als
+        auch des sie betreffenden Zugriffs, der Eingabe, der Weitergabe, der Sicherung der Verfügbarkeit und ihrer
+        Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, die
+        Löschung
+        von Daten und Reaktionen auf die Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz
+        personenbezogener Daten bereits bei der Entwicklung bzw. Auswahl von Hardware, Software sowie Verfahren
+        entsprechend dem Prinzip des Datenschutzes, durch Technikgestaltung und durch datenschutzfreundliche
+        Voreinstellungen.</p>
+    </div>
+    <div class="absatz">
+      <h2>Übermittlung von personenbezogenen Daten</h2>
+      <p>Im Rahmen unserer Verarbeitung von personenbezogenen Daten kommt es vor, dass die Daten an andere Stellen,
+        Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt oder sie ihnen gegenüber
+        offengelegt werden. Zu den Empfängern dieser Daten können z.B. mit IT-Aufgaben beauftragte Dienstleister oder
+        Anbieter von Diensten und Inhalten, die in eine Webseite eingebunden werden, gehören. In solchen Fall beachten
+        wir
+        die gesetzlichen Vorgaben und schliessen insbesondere entsprechende Verträge bzw. Vereinbarungen, die dem Schutz
+        Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab.</p>
+
+      <h2>Datenverarbeitung in Drittländern</h2>
+      <p>Diese Website verwendet Cookies. Cookies sind Textdateien, die Daten von besuchten Websites oder Domains
+        enthalten und von einem Browser auf dem Computer des Benutzers gespeichert werden. Ein Cookie dient in erster
+        Linie dazu, die Informationen über einen Benutzer während oder nach seinem Besuch innerhalb eines
+        Onlineangebotes
+        zu speichern. Zu den gespeicherten Angaben können z.B. die Spracheinstellungen auf einer Webseite, der
+        Loginstatus, ein Warenkorb oder die Stelle, an der ein Video geschaut wurde, gehören. Zu dem Begriff der Cookies
+        zählen wir ferner andere Technologien, die die gleichen Funktionen wie Cookies erfüllen (z.B. wenn Angaben der
+        Nutzer anhand pseudonymer Onlinekennzeichnungen gespeichert werden, auch als “Nutzer-IDs” bezeichnet)Die
+        folgenden
+        Cookie-Typen und Funktionen werden unterschieden:</p>
+      <ul>
+        <li>Temporäre Cookies (auch: Session- oder Sitzungs-Cookies): Temporäre Cookies werden spätestens gelöscht,
+          nachdem ein Nutzer ein Online-Angebot verlassen und seinen Browser geschlossen hat.</li>
+        <li>Permanente Cookies: Permanente Cookies bleiben auch nach dem Schliessen des Browsers gespeichert. So kann
+          beispielsweise der Login-Status gespeichert oder bevorzugte Inhalte direkt angezeigt werden, wenn der Nutzer
+          eine Website erneut besucht. Ebenso können die Interessen von Nutzern, die zur Reichweitenmessung oder zu
+          Marketingzwecken verwendet werden, in einem solchen Cookie gespeichert werden.</li>
+        <li>First-Party-Cookies: First-Party-Cookies werden von uns selbst gesetzt.</li>
+        <li>Third-Party-Cookies (auch: Drittanbieter-Cookies): Drittanbieter-Cookies werden hauptsächlich von
+          Werbetreibenden (sog. Dritten) verwendet, um Benutzerinformationen zu verarbeiten.</li>
+        <li>Notwendige (auch: essenzielle oder unbedingt erforderliche) Cookies: Cookies können zum einen für den
+          Betrieb
+          einer Webseite unbedingt erforderlich sein (z.B. um Logins oder andere Nutzereingaben zu speichern oder aus
+          Gründen der Sicherheit).</li>
+        <li>Statistik-, Marketing- und Personalisierung-Cookies: Ferner werden Cookies im Regelfall auch im Rahmen der
+          Reichweitenmessung eingesetzt sowie dann, wenn die Interessen eines Nutzers oder sein Verhalten (z.B.
+          Betrachten
+          bestimmter Inhalte, Nutzen von Funktionen etc.) auf einzelnen Webseiten in einem Nutzerprofil gespeichert
+          werden. Solche Profile dienen dazu, den Nutzern z.B. Inhalte anzuzeigen, die ihren potenziellen Interessen
+          entsprechen. Dieses Verfahren wird auch als “Tracking”, d.h., Nachverfolgung der potenziellen Interessen der
+          Nutzer bezeichnet. Soweit wir Cookies oder “Tracking”-Technologien einsetzen, informieren wir Sie gesondert in
+          unserer Datenschutzerklärung oder im Rahmen der Einholung einer Einwilligung.</li>
+      </ul>
+      <p>Hinweise zu Rechtsgrundlagen: Auf welcher Rechtsgrundlage wir Ihre personenbezogenen Daten mithilfe von Cookies
+        verarbeiten, hängt davon ab, ob wir Sie um eine Einwilligung bitten. Falls dies zutrifft und Sie in die Nutzung
+        von Cookies einwilligen, ist die Rechtsgrundlage der Verarbeitung Ihrer Daten die erklärte Einwilligung.
+        Andernfalls werden die mithilfe von Cookies verarbeiteten Daten auf Grundlage unserer berechtigten Interessen
+        (z.B. an einem betriebswirtschaftlichen Betrieb unseres Onlineangebotes und dessen Verbesserung) verarbeitet
+        oder,
+        wenn der Einsatz von Cookies erforderlich ist, um unsere vertraglichen Verpflichtungen zu erfüllen.</p>
+      <p>Speicherdauer: Sofern wir Ihnen keine expliziten Angaben zur Speicherdauer von permanenten Cookies mitteilen
+        (z.
+        B. im Rahmen eines sog. Cookie-Opt-Ins), gehen Sie bitte davon aus, dass die Speicherdauer bis zu zwei Jahre
+        betragen kann.</p>
+      <p>Allgemeine Hinweise zum Widerruf und Widerspruch (Opt-Out): Abhängig davon, ob die Verarbeitung auf Grundlage
+        einer Einwilligung oder gesetzlichen Erlaubnis erfolgt, haben Sie jederzeit die Möglichkeit, eine erteilte
+        Einwilligung zu widerrufen oder der Verarbeitung Ihrer Daten durch Cookie-Technologien zu widersprechen
+        (zusammenfassend als “Opt-Out” bezeichnet). Sie können Ihren Widerspruch zunächst mittels der Einstellungen
+        Ihres
+        Browsers erklären, z.B., indem Sie die Nutzung von Cookies deaktivieren (wobei hierdurch auch die
+        Funktionsfähigkeit unseres Onlineangebotes eingeschränkt werden kann). Ein Widerspruch gegen den Einsatz von
+        Cookies zu Zwecken des Onlinemarketings kann auch mittels einer Vielzahl von Diensten, vor allem im Fall des
+        Trackings, über die Webseiten https://optout.aboutads.info und https://www.youronlinechoices.com/ erklärt
+        werden.
+        Daneben können Sie weitere Widerspruchshinweise im Rahmen der Angaben zu den eingesetzten Dienstleistern und
+        Cookies erhalten.</p>
+      <p>Verarbeitung von Cookie-Daten auf Grundlage einer Einwilligung: Wir setzen ein Verfahren zum
+        Cookie-Einwilligungs-Management ein, in dessen Rahmen die Einwilligungen der Nutzer in den Einsatz von Cookies,
+        bzw. der im Rahmen des Cookie-Einwilligungs-Management-Verfahrens genannten Verarbeitungen und Anbieter
+        eingeholt
+        sowie von den Nutzern verwaltet und widerrufen werden können. Hierbei wird die Einwilligungserklärung
+        gespeichert,
+        um deren Abfrage nicht erneut wiederholen zu müssen und die Einwilligung entsprechend der gesetzlichen
+        Verpflichtung nachweisen zu können. Die Speicherung kann serverseitig und/oder in einem Cookie (sogenanntes
+        Opt-In-Cookie, bzw. mithilfe vergleichbarer Technologien) erfolgen, um die Einwilligung einem Nutzer, bzw.
+        dessen
+        Gerät zuordnen zu können. Vorbehaltlich individueller Angaben zu den Anbietern von Cookie-Management-Diensten
+        gelten die folgenden Hinweise: Die Dauer der Speicherung der Einwilligung kann bis zu zwei Jahren betragen.
+        Hierbei wird ein pseudonymer Nutzer-Identifikator gebildet und mit dem Zeitpunkt der Einwilligung, Angaben zur
+        Reichweite der Einwilligung (z. B. welche Kategorien von Cookies und/oder Diensteanbieter) sowie dem Browser,
+        System und verwendeten Endgerät gespeichert. Verarbeitete Datenarten: Nutzungsdaten (z.B. besuchte Webseiten,
+        Interesse an Inhalten, Zugriffszeiten), Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen).
+        Betroffene Personen: Nutzer (z.B. Webseitenbesucher, Nutzer von Onlinediensten). Rechtsgrundlagen: Einwilligung
+        (Art. 6 Abs. 1 S. 1 lit. a. DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f. DSGVO).</p>
+    </div>
+    <div class="absatz">
+      <h2>Datenschutzerklärung für Kontaktformular</h2>
+      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular
+        inklusive
+        der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen
+        bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+    </div>
+    <div class="absatz">
+      <h2>Änderungen</h2>
+      <p>Wir können diese Datenschutzerklärung jederzeit ohne Vorankündigung anpassen. Es gilt die jeweils aktuelle, auf
+        unserer Website publizierte Fassung. Soweit die Datenschutzerklärung Teil einer Vereinbarung mit Ihnen ist,
+        werden
+        wir Sie im Falle einer Aktualisierung über die Änderung per E-Mail oder auf andere geeignete Weise informieren.
+      </p>
+    </div>
+    <div class="absatz">
+      <h2>Fragen an den Datenschutzbeauftragten</h2>
+      <p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die
+        für
+        den Datenschutz zu Beginn der Datenschutzerklärung aufgeführten, verantwortlichen Person in unserer
+        Organisation.
+      </p>
+    </div>
+  </main>
+  <footer><section class="Footer-Unten">
+      <div class="Ganze-Footer-Unten">
+        <div class="Footer-Links">
+          <img src="swiss-albanian-network-logo-final-1-Footer.webp" alt="Logo-Footer" class="Logo-Footer">
+          <p>Eine Plattform, um alle in der Schweiz lebenden <br>Albaner zusammenzubringen</p>
+        </div>
+        <div class="Footer-Mitte">
+          <h1>Links</h1>
+          <a href="index.html">Home</a>
+          <a href="about.html">Über den Verein</a>
+          <a href="benefits.html">Vorteile</a>
+          <a href="events.html">Veranstaltungen</a>
+          <a href="Gönner-in_werden.html">Gönner*in werden</a>
+        </div>
+        <div class="Footer-Rechts">
+          <h3>Soziale Medien</h3>
+          <div class="Social-Media-Icons">
+            <a href="https://www.instagram.com/swissalbaniannetwork/"><i
+                class="fa-brands fa-footer fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/swiss-albanian-network/"><i
+                class="fa-brands fa-footer fa-linkedin-in"></i></a>
+          </div>
+          <p id="Titel-Kontakt">Kontakt</p>
+          <p>Swiss Albanian Network <br>8840 Einsiedeln</p>
+          <p>+41 79 663 77 77</p>
+          <p id="E-Mail">welcome@swissalbaniannetwork.ch</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Rote-Balken">
+      <div class="Balken-Links">
+        <a href="https://swissalbaniannetwork.ch/wp-content/uploads/2024/01/Verein_Statuten.pdf">Statuten</a>|<a href="impressum.html">Impressum</a>|<a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="Balken-Mitte">
+         <a href="https://taulanthaxhisefa.com/" style="color: white; text-decoration: none;">Designed by T.H</a>
+      </div>
+      <div class="Balken-Rechts">
+        <a href="https://codexo.ch/"><img src="Codexo-Rotes-Balken-Logo.png" alt="Codexo-Rotes-Balken-Logo" width="30"
+            height="auto"></a>Webseite erstellt von Codexo GmbH
+      </div>
+    </section>
+  </footer>
+  <script>
+    (() => {
+      const button = document.getElementById('menueButton');
+      const menue = document.getElementById('hauptmenue');
+      if (!button || !menue) return;
+
+      const setOpen = (open) => {
+        document.body.classList.toggle('menü-offen', open);
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        button.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      };
+
+      button.addEventListener('click', () => {
+        setOpen(!document.body.classList.contains('menü-offen'));
+      });
+
+      menue.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) setOpen(false);
+      });
+    })();
+  </script>
+</body>
+</html>
+
+

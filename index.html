@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Swiss Albanian Network</title>
+  <link rel="icon" type="image/webp" href="logo-san.webp">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Sora', sans-serif;
+    }
+
+    .Logo-div-Nav {
+      text-decoration: none;
+      border: none;
+    }
+
+    .Logo-a {
+      text-decoration: none;
+      border: none !important;
+    }
+
+    .Logo-a:hover {
+      border-bottom: none !important;
+    }
+  .gönner-balken {
+    position: fixed;
+    right: 0;
+    top: 65%;
+    transform: translateY(-50%);
+    background: #bd1a20;
+    color: #fff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 600;
+    width: 60px;
+    height: auto;
+    min-height: 160px;
+    padding: 24px 0;
+    margin: 0;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: width 0.3s ease;
+  }
+
+    .gönner-balken span {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+      transform: rotate(180deg);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 85px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 12px 40px;
+    }
+
+    .logo {
+      height: 75px;
+      width: auto;
+      padding-left: 30px;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 70px;
+    }
+
+    nav a:not(.Logo-a) {
+      text-decoration: none;
+      color: #000000;
+      font-size: 15px;
+      font-weight: 500;
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+      display: inline-block;
+    }
+
+    nav a:not(.Logo-a):hover {
+      border-bottom: 2px solid #d9534f;
+    }
+
+    nav a.aktiv {
+      border-bottom: 2px solid #d9534f;
+      color: #d9534f;
+    }
+
+
+    main {
+      padding: 0;
+    }
+
+    section h1 {
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    section p {
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .titelbereich {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      background-image: url("https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/dabed64ba8917425b33c1d3d984997c336daaec4.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 150px 150px;
+      min-height: 600px;
+      width: auto;
+      margin: 0;
+    }
+
+    .titelbereich-inhalt {
+      flex: 1;
+      max-width: 1800px;
+    }
+
+    .titelbereich-untertitel {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .titelbereich h1 {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .titelbereich-datum {
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding-left: 10px;
+    }
+
+    .titelbereich-knopf {
+      background-color: #d9534f;
+      color: white;
+      border: 2px solid white;
+      padding: 18px 50px;
+      font-size: 14px;
+      font-weight: 400;
+      border-radius: 50px;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+
+    .titelbereich-bild {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .poster-bild {
+      max-width: 100%;
+      height: 450px;
+      width: 400px;
+      border-radius: 15px;
+    }
+
+    .vergangene-veranstaltungen {
+      background-color: #ffffff;
+      padding: 60px 20px;
+    }
+
+    .vergangene-veranstaltungen .container {
+      max-width: auto;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .container-2 {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .vergangene-veranstaltungen h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .vergangene-veranstaltungen .unterstreichung {
+      width: 450px;
+      max-width: 90%;
+      height: 3px;
+      background: #ddd6d6;
+      margin: 14px auto 36px;
+    }
+
+    .veranstaltungen-gitter {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .veranstaltungs-karte {
+      background: #fff;
+      width: 375px;
+      height: 500px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+
+
+    .alles-zeigen-umhüllung {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .alles-zeigen-knopf {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 16px;
+      color: #d9534f;
+      background: transparent;
+      border: 2px solid #d9534f;
+      border-radius: 40px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.18s ease, color 0.18s ease, transform 0.08s ease;
+    }
+
+
+
+
+    .sponsor {
+      background: #ffffff;
+      padding: 60px 20px;
+    }
+
+    .sponsor-inner {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .sponsor-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .sponsor-text h2 {
+      font-size: 50px;
+      text-align: left;
+      margin-bottom: 12px;
+      color: #111;
+      padding-top: 80px;
+    }
+
+    .sponsor-text p {
+      color: #444;
+      margin-bottom: 22px;
+    }
+
+    .sponsor-image img {
+      width: 450px;
+      height: 475px;
+      border-radius: 60px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      display: block;
+    }
+
+    .cta-outline {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 40px;
+      border: 1px solid #d9534f;
+      color: #d9534f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cta-outline:hover {
+      background: #d9534f;
+      color: #fff;
+    }
+
+    .whatsapp-gruppe {
+      background-image: url(https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/Frame-20.png);
+      width: 100%;
+      height: 550px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 200px 20px;
+
+    }
+
+    .whatsapp-inhalt h1 {
+      color: #ffffff;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .whatsapp-inhalt p {
+      color: #ffffff;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+
+    .whatsapp-knopf {
+      color: white;
+      border: 2px solid white;
+      padding: 18px 60px;
+      font-weight: 450;
+      border-radius: 50px;
+      cursor: pointer;
+      background-color: transparent;
+      text-decoration: none;
+      margin: 40px auto 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+    }
+
+    .whatsapp-knopf h2 {
+      color: white;
+      font-size: 18px;
+      align-items: center;
+    }
+
+    #whatsapp-titelbereich-icon {
+      font-size: 20px;
+      margin-right: 15px;
+      align-items: center;
+      padding-top: 2px;
+    }
+
+    .Begleite-Uns {
+      line-height: 0.5;
+    }
+
+    .Begleite-Uns h1 {
+      color: #000000;
+      font-size: 70px;
+      text-align: center;
+      padding-top: 80px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+    }
+
+    .Begleite-Uns p {
+      color: #000000;
+      font-size: 15px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .Beide_Handy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 200px;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      background-image: url(https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/Rectangle-19-1.png);
+      flex-wrap: wrap;
+    }
+
+
+
+    .Eine-Gemeinschaft {
+      background-image: url(https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/Frame-20.png);
+      width: 100%;
+      min-height: 400px;
+      background-repeat: no-repeat;
+      
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+    }
+
+    .Eine-Gemeinschaft-content h1 {
+      color: #ffffff;
+      font-size: 40px;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .Eine-Gemeinschaft-content p {
+      color: #ffffff;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .Eine-Gemeinschaft-btn {
+      color: white;
+      border: 2px solid white;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      background-color: transparent;
+      display: block;
+      margin: 40px auto 0 auto;
+      text-decoration: none;
+
+    }
+
+    .Eine-Gemeinschaft-btn a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    .Eine-Gemeinschaft-btn h2 {
+      color: white;
+      font-size: 18px;
+    }
+
+.Unsere-Partner h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .Unsere-Partner {
+    max-width: 1800px;
+    margin: 100px auto 100px;
+    text-align: center;
+  }
+
+  .Unsere-Partner .unterstreichung {
+    width: 750px;
+    max-width: 90%;
+    height: 3px;
+    background: #ddd6d6;
+    margin: 14px auto 8px;
+  }
+
+  .Bild-Behälter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    
+    padding-bottom: 30px;
+  }
+
+  .Bild-Behälter img {
+    max-width: 200px;
+    height: auto;
+  }
+
+
+
+    .footer-Kontaktform {
+      background-image: url(https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/Frame-201.png);
+      width: 100%;
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .Kontaktform h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .Kontaktform p {
+      color: #f0eeee;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .Kontaktform {
+      width: 100%;
+      max-width: 750px;
+      display: flex;
+      flex-direction: column;
+      
+      gap: 20px;
+      text-align: center;
+      color: #e3e3e3;
+    }
+
+    .Kontaktform input {
+      padding: 12px;
+      border: none;
+      border-radius: 15px;
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      background-color: #e3e3e3;
+    }
+
+    .Kontaktform textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 15px;
+      width: 100%;
+      height: 120px;
+      resize: vertical;
+      background-color: #e3e3e3;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+
+    .Kontaktform button {
+      width: 180px;
+      height: 70px;
+      margin: 10px auto 0;
+      padding: 20px 0;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 40px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .Ganze-Footer-Unten {
+      background-color: #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .Logo-Footer {
+      padding-top: 50px;
+      width: 125px;
+      height: auto;
+    }
+
+    .Footer-Links p {
+      padding-top: 20px;
+      padding-bottom: 200px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+
+    .Footer-Mitte h1 {
+      padding-top: 50px;
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .Footer-Mitte a {
+      font-size: 22px;
+      display: block;
+      margin: 6px 0;
+      color: #e5e4e4;
+      text-decoration: none;
+      padding: 8px 0;
+    }
+
+
+    .Footer-Links {
+      text-align: left;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .Footer-Mitte {
+      text-align: left;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .Footer-Rechts {
+      text-align: left;
+      color: #ffffff;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .Footer-Rechts h3 {
+      padding-top: 50px;
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .Footer-Rechts p {
+      color: #e5e4e4;
+      font-size: 20px;
+    }
+
+    .Footer-Rechts p#Titel-Kontakt {
+      font-size: 25px;
+      margin-bottom: 12px;
+      padding-top: 15px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .Footer-Rechts p#E-Mail {
+      color: #ffffff;
+    }
+
+    .fa-brands.fa-footer {
+      font-size: 40px;
+      color: #000000;
+      margin-right: 20px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      height: 65px;
+      width: 65px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 1;
+      
+    }
+
+    .Rote-Balken {
+      background-color: #db0101;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      flex-wrap: wrap;
+      
+      gap: 15px;
+    }
+
+    .Balken-Links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .Balken-Mitte {
+      text-align: center;
+    }
+
+    .Balken-Rechts {
+      text-align: right;
+    }
+
+    .Balken-Rechts img {
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+
+    .Ganze-Footer-Unten {
+      gap: 32px;
+      padding: 18px 18px;
+    }
+
+    .Logo-Footer {
+      padding-top: 26px;
+      width: 92px;
+    }
+
+    .Footer-Links p {
+      padding-top: 12px;
+      padding-bottom: 90px;
+      font-size: 15px;
+    }
+
+    .Footer-Mitte h1 {
+      padding-top: 26px;
+      font-size: 20px;
+    }
+
+    .Footer-Mitte a {
+      font-size: 16px;
+      padding: 5px 0;
+    }
+
+    .Footer-Rechts h3 {
+      padding-top: 26px;
+      font-size: 20px;
+    }
+
+    .Footer-Rechts p {
+      font-size: 15px;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .Footer-Rechts p#Titel-Kontakt {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .Footer-Rechts p#Titel-Kontakt + p + p {
+      margin-top: 18px;
+    }
+
+    .Footer-Rechts p#E-Mail {
+      margin-top: 18px;
+    }
+
+    .fa-brands.fa-footer {
+      font-size: 28px;
+      margin-right: 12px;
+      height: 46px;
+      width: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .Footer-Mitte a.aktiver-footer-link {
+      border-bottom: 2px solid #d9534f;
+      color: #d9534f;
+    }
+
+
+
+
+
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 70px;
+      }
+
+      header nav {
+        padding: 12px 20px;
+      }
+
+      .logo {
+        height: 50px;
+        padding-left: 0;
+      }
+
+
+
+
+
+      .gönner-balken {
+        width: 45px;
+        min-height: 120px;
+        padding: 16px 0;
+      }
+
+      .gönner-balken span {
+        font-size: 14px;
+      }
+
+      .titelbereich {
+        flex-direction: column;
+        padding: 40px 20px;
+        min-height: auto;
+      }
+
+      .titelbereich h1 {
+        font-size: 24px;
+      }
+
+      .titelbereich-datum {
+        font-size: 13px;
+      }
+
+      .poster-bild {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+      }
+
+      .veranstaltungen-gitter {
+        gap: 16px;
+      }
+
+      .veranstaltungs-karte {
+        width: 100%;
+        max-width: 520px;
+      }
+
+      .sponsor-inner {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .sponsor-text {
+        text-align: center;
+      }
+
+      .sponsor-text h2 {
+        font-size: 28px;
+        padding-top: 20px;
+      }
+
+      .sponsor-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+      .whatsapp-inhalt h1 {
+        font-size: 28px;
+        padding-top: 40px;
+      }
+
+      .whatsapp-inhalt p {
+        font-size: 16px;
+      }
+
+      .Begleite-Uns h1 {
+        font-size: 36px;
+      }
+
+      .Begleite-Uns h6 {
+        font-size: 16px;
+      }
+
+      .Beide_Handy {
+        gap: 40px;
+        padding: 30px 20px 50px;
+      }
+
+      .Beide_Handy img {
+        max-width: 200px;
+      }
+
+      .Eine-Gemeinschaft-content h1 {
+        font-size: 28px;
+        padding-top: 40px;
+      }
+
+      .Eine-Gemeinschaft-content p {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+
+      .Unsere-Partner h2 {
+        font-size: 28px;
+        padding-top: 80px;
+      }
+
+      .Unsere-Partner {
+        padding: 20px;
+      }
+
+      .Bild-Behälter {
+        gap: 40px;
+        padding-bottom: 50px;
+      }
+
+      .Bild-Behälter img {
+        max-width: 150px;
+      }
+
+      .Kontaktform h2 {
+        font-size: 32px;
+      }
+
+      .Kontaktform p {
+        font-size: 16px;
+      }
+
+      .Ganze-Footer-Unten {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 40px;
+      }
+
+      .Footer-Links,
+      .Footer-Mitte,
+      .Footer-Rechts {
+        width: 100%;
+        text-align: center;
+      }
+
+      .Footer-Links p {
+        padding-bottom: 50px;
+        font-size: 16px;
+      }
+
+      .Footer-Mitte h1,
+      .Footer-Rechts h3 {
+        padding-top: 20px;
+        font-size: 22px;
+      }
+
+      .Footer-Mitte a {
+        font-size: 18px;
+      }
+
+      .Footer-Rechts p {
+        font-size: 16px;
+      }
+
+      .Rote-Balken {
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .Balken-Links,
+      .Balken-Mitte,
+      .Balken-Rechts {
+        text-align: center;
+      }
+    }
+
+    
+    .vergangene-veranstaltungen {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .vergangene-veranstaltungen h2 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .vergangene-veranstaltungen-trennlinie {
+      width: 590px;
+      height: 3px;
+      background: #d9d8d7;
+      margin: 30px auto 60px auto;
+    }
+
+    .karussell-container {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    .karussell-wrapper {
+      overflow: hidden;
+      border-radius: 15px;
+      height: 500px;
+    }
+
+    .karussell-spur {
+      display: flex;
+      transition: transform 0.5s ease;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .vergangene-veranstaltung-verweis {
+      display: block;
+      flex: 0 0 calc(33.333% - 14px);
+      height: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .vergangene-veranstaltung-karte {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .vergangene-veranstaltung-karte::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(208.78% 70.71% at 50.00% 50.00%, rgba(183, 65, 55, 0.20) 0%, rgba(183, 65, 55, 0.00) 100%);
+    }
+
+    .karussell-knopf {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #d9534f;
+      font-size: 50px;
+      cursor: pointer;
+      padding: 10px 20px;
+      z-index: 10;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      background-color: transparent;
+      border: none;
+    }
+
+    .karussell-knopf.vorherige {
+      left: 20px;
+    }
+
+    .karussell-knopf.nächste {
+      right: 20px;
+    }
+
+    .karussell-punkte {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .karussell-punkt {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      padding: 0;
+    }
+
+    .karussell-punkt.aktiv {
+      background: #000000;
+      width: 12px;
+      height: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .vergangene-veranstaltung-verweis {
+        flex: 0 0 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .vergangene-veranstaltung-verweis {
+        flex: 0 0 100%;
+      }
+
+      .karussell-container {
+        padding: 0 50px;
+      }
+
+      .karussell-knopf {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .vergangene-veranstaltung-karte {
+        min-width: calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .vergangene-veranstaltung-karte {
+        min-width: 100%;
+      }
+
+      .karussell-container {
+        padding: 0 50px;
+      }
+
+      .karussell-knopf {
+        font-size: 30px;
+        padding: 15px;
+      }
+    }
+
+    
+    @media (max-width: 768px) {
+      .veranstaltungen-behälter {
+        padding: 30px;
+      }
+
+      .veranstaltung-titel {
+        font-size: 25px;
+      }
+
+      .veranstaltung-einzelheiten {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .veranstaltungs-detail-trenner {
+        display: none;
+      }
+
+      .veranstaltung-bild img {
+        min-height: 250px;
+      }
+
+      .veranstaltung-knopf {
+        width: 100%;
+      }
+    }
+
+    :root {
+      --kopfhoehe: 85px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      padding-top: var(--kopfhoehe);
+    }
+
+    .menü-button {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+
+    .menü-icon {
+      position: relative;
+      width: 26px;
+      height: 2px;
+      background: #000;
+      display: block;
+      transition: background 0.2s ease;
+    }
+
+    .menü-icon::before,
+    .menü-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 26px;
+      height: 2px;
+      background: #000;
+      transition: transform 0.2s ease, top 0.2s ease;
+    }
+
+    .menü-icon::before {
+      top: -8px;
+    }
+
+    .menü-icon::after {
+      top: 8px;
+    }
+
+    body.menü-offen .menü-icon {
+      background: transparent;
+    }
+
+    body.menü-offen .menü-icon::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    body.menü-offen .menü-icon::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: 1024px) {
+      header nav {
+        padding: 12px 24px;
+      }
+
+      header nav ul {
+        gap: 28px;
+      }
+
+      .logo {
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gönner-balken {
+        display: none;
+      }
+
+      .menü-button {
+        display: inline-flex;
+      }
+
+      header nav {
+        padding: 12px 16px;
+      }
+
+      header nav ul {
+        position: fixed;
+        top: var(--kopfhoehe);
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 16px 18px;
+        display: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 999;
+      }
+
+      body.menü-offen header nav ul {
+        display: flex;
+      }
+
+      header nav ul li {
+        padding: 8px 0;
+      }
+
+      header nav a:not(.Logo-a) {
+        font-size: 16px;
+        padding: 10px 0;
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="gönner-balken" href="Gönner-in_werden.html"><span>Gönner*in werden</span></a>
+
+  <header>
+    <nav>
+      <div class="Logo-div-Nav">
+        <a class="Logo-a" href="index.html">
+          <img src="logo-san.webp" alt="Swiss Albanian Network" class="logo">
+        </a>
+      </div>
+
+
+      <button class="menü-button" id="menueButton" type="button" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen">
+        <span class="menü-icon" aria-hidden="true"></span>
+      </button>
+
+      <ul id="hauptmenue">
+        <li><a href="index.html" class="aktiv">Home</a></li>
+        <li><a href="about.html">Über den Verein</a></li>
+        <li><a href="benefits.html">Vorteile</a></li>
+        <li><a href="events.html">Veranstaltungen</a></li>
+        <li><a href="Gönner-in_werden.html">Gönner*in werden</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="titelbereich">
+      <div class="titelbereich-inhalt">
+        <p class="titelbereich-untertitel">Kommende Veranstaltung</p>
+        <h1>Last After Work Drinks <br>of the Year - Let's close <br>2025 together.</h1>
+        <p class="titelbereich-datum">18/12/2025 |<br>Mini Café Bar, Bleicherweg 62, 8002 Zürich</p>
+        <a href="anmeldumgs-fenster.html"><button class="titelbereich-knopf">Anmeldung</button></a>
+      </div>
+      <div class="titelbereich-bild">
+        <img src="Bild_Home_Cocktail.jpg" alt="Last After Work Drinks Poster" class="poster-bild">
+      </div>
+    </section>
+
+    <section class="vergangene-veranstaltungen">
+      <h2>Vergangene Events</h2>
+      <div class="vergangene-veranstaltungen-trennlinie"></div>
+
+      <div class="karussell-container">
+        <button class="karussell-knopf vorherige" onclick="moveCarousel(-1)">‹</button>
+
+        <div class="karussell-wrapper">
+          <div class="karussell-spur" id="carouselTrack">
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-10-31.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/09/Swissalbaniannetwork_31.10.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-09-25.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-12-at-13.33.19_7423a23c.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-26-06.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/05/WhatsApp-Bild-2025-05-28-um-23.52.16_52527578.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-03-01.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/03/1_Website.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-04-24.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-02-at-16.04.34_ecff48fc.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2024-12-12.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2024/11/AWD-12.12.24-–-Banner-2520-x-1680-px.jpg');">
+              </div>
+            </a>
+
+            
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-09-25.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-12-at-13.33.19_7423a23c.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-26-06.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/05/WhatsApp-Bild-2025-05-28-um-23.52.16_52527578.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-03-01.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/03/1_Website.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2025-04-24.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-02-at-16.04.34_ecff48fc.jpg');">
+              </div>
+            </a>
+
+            <a class="vergangene-veranstaltung-verweis" href="event-2024-12-12.html">
+              <div class="vergangene-veranstaltung-karte"
+                style="background-image: url('https://swissalbaniannetwork.ch/wp-content/uploads/2024/11/AWD-12.12.24-–-Banner-2520-x-1680-px.jpg');">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <button class="karussell-knopf nächste" onclick="moveCarousel(1)">›</button>
+
+        <div class="karussell-punkte">
+          <button class="karussell-punkt aktiv" onclick="goToSlide(0)"></button>
+          <button class="karussell-punkt" onclick="goToSlide(1)"></button>
+          <button class="karussell-punkt" onclick="goToSlide(2)"></button>
+          <button class="karussell-punkt" onclick="goToSlide(3)"></button>
+          <button class="karussell-punkt" onclick="goToSlide(4)"></button>
+          <button class="karussell-punkt" onclick="goToSlide(5)"></button>
+        </div>
+      </div>
+
+      <div class="alles-zeigen-umhüllung">
+        <a class="alles-zeigen-knopf" href="events.html">Alle anzeigen</a>
+      </div>
+    </section>
+
+    <section class="whatsapp-gruppe">
+      <div class="whatsapp-inhalt">
+        <h1>Treten Sie unserer WhatsApp-Eventgruppe bei</h1>
+        <p>Bleiben Sie stets über alle bevorstehenden Ereignisse informiert</p>
+        <a class="whatsapp-knopf" href="https://chat.whatsapp.com/K4dJ8ZwpcT5JDpAg7Gi6fk">
+          <i id="whatsapp-titelbereich-icon" class="fa-brands fa-whatsapp"></i>
+          <h2>Gruppe beitreten</h2>
+        </a>
+      </div>
+    </section>
+
+    <section class="Begleite-Uns">
+      <h1>Begleite uns</h1><br>
+      <p>in den sozialen Medien</p>
+      <div class="Beide_Handy">
+        <img src="Handy1_HOME.webp" alt="Handy_Links" class="Handy-Links">
+        <img src="Handy2_HOME.webp" alt="Handy_rechts" class="Handy-Rechts">
+      </div>
+    </section>
+
+    <section class="Eine-Gemeinschaft">
+      <div class="Eine-Gemeinschaft-content">
+        <h1>Eine Gemeinschaft!</h1>
+        <p>Wir möchten die Vernetzung und die Zusammenarbeit albanisch-stämmiger Personen in der Schweiz vorantreiben,
+          indem wir dir <br>eine Plattform zum Netzwerken bieten.</p>
+        <button class="Eine-Gemeinschaft-btn"><a href="about.html">
+            <h2>Mehr Anzeigen</h2>
+          </a>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="Unsere-Partner">
+      <h2>Unsere Partner</h2>
+      <div class="unterstreichung"></div>
+
+      <div class="Image-Container">
+        <a href="https://www.zurichnetgroup.ch/"><img src="zurichnetgroup_LOGO.png" alt="Logo-zurichnetgroup"
+            width="275"></a>
+        <a href="https://codexo.ch/"><img src="Codexo_LOGO.png" alt="Logo-Codexo" width="275"></a>
+        <a href="https://www.exojop.ch/"><img src="exojop_LOGO.webp" alt="Logo-exojop" width="275"></a>
+        <a href="https://taulanthaxhisefa.com/"><img src="Tauland_LOGO.png" alt="Logo-Tauland" width="275"></a>
+        <img src="NamaniMedia_LOGO.png" alt="Logo-NamaniMedia" width="275">
+      </div>
+
+      <h2>Unsere Medienpartner</h2>
+      <div class="unterstreichung"></div>
+
+      <div class="Image-Container">
+        <img src="eriscom_LOGO.webp" alt="Logo-eriscom" width="275">
+        <img src="albinfo_LOGO.webp" alt="Logo-albinfo" width="275">
+      </div>
+    </section>
+
+    <section>
+      <div class="footer-Kontaktform">
+        <form class="Kontaktform">
+          <h2>Kontakt</h2>
+          <p>Hast Du Fragen zu unserem Netzwerk? <br>Kontaktiere uns jederzeit!</p>
+          <input type="text" id="Vorname" name="Vorname" placeholder="Vorname" required>
+          <input type="text" id="Name" name="Name" placeholder="Name" required>
+          <input type="email" id="Email" name="Email" placeholder="E-Mail" required>
+          <input type="tel" id="Nummer" name="Nummer" placeholder="Telefonnummer" required>
+          <textarea id="message" name="message" placeholder="Nachricht" required></textarea>
+          <button type="submit">Senden</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="Footer-Unten">
+      <div class="Ganze-Footer-Unten">
+        <div class="Footer-Links">
+          <img src="swiss-albanian-network-logo-final-1-Footer.webp" alt="Logo-Footer" class="Logo-Footer">
+          <p>Eine Plattform, um alle in der Schweiz lebenden <br>Albaner zusammenzubringen</p>
+        </div>
+        <div class="Footer-Mitte">
+          <h1>Links</h1>
+          <a href="index.html">Home</a>
+          <a href="about.html">Über den Verein</a>
+          <a href="benefits.html">Vorteile</a>
+          <a href="events.html">Veranstaltungen</a>
+          <a href="Gönner-in_werden.html">Gönner*in werden</a>
+        </div>
+        <div class="Footer-Rechts">
+          <h3>Soziale Medien</h3>
+          <div class="Social-Media-Icons">
+            <a href="https://www.instagram.com/swissalbaniannetwork/"><i
+                class="fa-brands fa-footer fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/swiss-albanian-network/"><i
+                class="fa-brands fa-footer fa-linkedin-in"></i></a>
+          </div>
+          <p id="Titel-Kontakt">Kontakt</p>
+          <p>Swiss Albanian Network <br>8840 Einsiedeln</p>
+          <p>+41 79 663 77 77</p>
+          <p id="E-Mail">welcome@swissalbaniannetwork.ch</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Rote-Balken">
+      <div class="Balken-Links">
+        <a href="https://swissalbaniannetwork.ch/wp-content/uploads/2024/01/Verein_Statuten.pdf">Statuten</a>|<a href="impressum.html">Impressum</a>|<a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="Balken-Mitte">
+         <a href="https://taulanthaxhisefa.com/" style="color: white; text-decoration: none;">Designed by T.H</a>
+      </div>
+      <div class="Balken-Rechts">
+        <a href="https://codexo.ch/"><img src="Codexo-Rotes-Balken-Logo.png" alt="Codexo-Rotes-Balken-Logo" width="30"
+            height="auto"></a>Webseite erstellt von Codexo GmbH
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.karussell-punkt');
+    const totalSlides = 6;
+    let slidesPerView = 3;
+    let autoplayInterval;
+    let isTransitioning = false;
+
+    function updateSlidesPerView() {
+      if (window.innerWidth <= 768) {
+        slidesPerView = 1;
+      } else if (window.innerWidth <= 1024) {
+        slidesPerView = 2;
+      } else {
+        slidesPerView = 3;
+      }
+    }
+
+    function moveCarousel(direction) {
+      if (isTransitioning) return;
+      updateSlidesPerView();
+      currentSlide += direction;
+      updateCarousel(true);
+      resetAutoplay();
+    }
+
+    function goToSlide(index) {
+      if (isTransitioning) return;
+      currentSlide = index;
+      updateCarousel(true);
+      resetAutoplay();
+    }
+
+    function updateCarousel(animate = true) {
+      updateSlidesPerView();
+      const slideWidth = 100 / slidesPerView;
+
+      if (animate) {
+        track.style.transition = 'transform 0.5s ease';
+      } else {
+        track.style.transition = 'none';
+      }
+
+      track.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('aktiv', index === (currentSlide % totalSlides));
+      });
+      if (currentSlide >= totalSlides) {
+        isTransitioning = true;
+        setTimeout(() => {
+          currentSlide = 0;
+          updateCarousel(false);
+          setTimeout(() => {
+            isTransitioning = false;
+          }, 50);
+        }, 500);
+      } else if (currentSlide < 0) {
+        isTransitioning = true;
+        currentSlide = totalSlides - 1;
+        updateCarousel(false);
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 50);
+      }
+    }
+
+    function autoplay() {
+      if (isTransitioning) return;
+      updateSlidesPerView();
+      currentSlide++;
+      updateCarousel(true);
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(autoplay, 3000);
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+
+    window.addEventListener('resize', () => updateCarousel(false));
+    updateCarousel(false);
+    startAutoplay();
+  </script>
+
+  <script>
+    (() => {
+      const button = document.getElementById('menueButton');
+      const menue = document.getElementById('hauptmenue');
+      if (!button || !menue) return;
+
+      const setOpen = (open) => {
+        document.body.classList.toggle('menü-offen', open);
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        button.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      };
+
+      button.addEventListener('click', () => {
+        setOpen(!document.body.classList.contains('menü-offen'));
+      });
+
+      menue.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) setOpen(false);
+      });
+    })();
+  </script>
+</body>
+
+</html>
+
+

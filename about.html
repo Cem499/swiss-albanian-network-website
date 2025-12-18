@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiss Albanian Network - Unsere Story</title>
+  <link rel="icon" type="image/webp" href="logo-san.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Sora', sans-serif;
+    }
+
+
+    body {
+      font-family: 'Sora', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .Logo-div-Nav {
+      text-decoration: none;
+      border: none;
+    }
+
+    .Logo-a {
+      text-decoration: none;
+      border: none !important;
+    }
+
+    .Logo-a:hover {
+      border-bottom: none !important;
+    }
+
+    .gönner-balken {
+      position: fixed;
+      right: 0;
+      top: 65%;
+      transform: translateY(-50%);
+      background: #bd1a20;
+      color: #fff;
+      text-decoration: none;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 600;
+      width: 60px;
+      height: auto;
+      min-height: 160px;
+      padding: 24px 0;
+      margin: 0;
+      border-radius: 10px 0px 0px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      transition: width 0.3s ease;
+    }
+
+    .gönner-balken span {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+      transform: rotate(180deg);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 85px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 12px 40px;
+    }
+
+    .logo {
+      height: 75px;
+      width: auto;
+      padding-left: 30px;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 70px;
+    }
+
+    nav a:not(.Logo-a) {
+      text-decoration: none;
+      color: #000000;
+      font-size: 15px;
+      font-weight: 500;
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      transition: border-bottom 0.3s ease;
+
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+    }
+
+    nav a:not(.Logo-a):hover {
+      border-bottom: 2px solid #d9534f;
+    }
+
+    nav a.aktiv {
+      border-bottom: 2px solid #d9534f;
+      color: #d9534f;
+    }
+
+
+
+
+    .behaelter {
+      margin: 0 auto;
+      padding: 60px auto;
+    }
+
+    .abschnitt {
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      font-size: 70px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #000000;
+      padding-top: 100px;
+    }
+
+    .untertitel {
+      text-align: center;
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 30px;
+    }
+
+    .trennlinie {
+      width: 590px;
+      height: 2px;
+      background: #d9d8d7;
+      margin: 30px auto;
+    }
+
+    .zeitstrahl {
+      position: relative;
+      max-width: 1200px;
+      margin: 60px auto;
+    }
+
+    .zeitstrahl::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      background: #000;
+      z-index: 0;
+    }
+
+    .zeitstrahl-rot {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 5px;
+      height: 0;
+      background: #B74137;
+      transform: translateX(-50%);
+      z-index: 1;
+      transition: height 0.3s ease;
+    }
+
+    .punkt {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: white;
+      border: 5px solid #B74137;
+      border-radius: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      transition: top 0.3s ease;
+    }
+
+    .ereignis {
+      width: 100%;
+      margin: 100px 0;
+      position: relative;
+    }
+
+    .ereignis-innen {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .ereignis.links .ereignis-innen {
+      flex-direction: row;
+    }
+
+    .ereignis.rechts .ereignis-innen {
+      flex-direction: row-reverse;
+    }
+
+    .ereignis-inhalt {
+      max-width: 500px;
+      padding: 0 30px;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .ereignis-inhalt.versteckt {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .jahr {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #B74137;
+    }
+
+    .ereignis-inhalt p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .abschlusstext {
+      background-image: url(https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/Frame-20.png);
+      padding-bottom: 60px;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 22px;
+      color: white;
+      min-height: 200px;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+
+    .team-umhuellung {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+      overflow-x: auto;
+    }
+
+    .team-mitglied {
+      position: relative;
+      width: 250px;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+
+
+    .team-mitglied img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .überlagerung {
+      position: absolute;
+      inset: 0;
+      background-color: #B74137;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .team-mitglied:hover .überlagerung {
+      opacity: 0.95;
+    }
+
+    .überlagerung h3 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .überlagerung p {
+      margin: 5px 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .überlagerung strong {
+      font-weight: 700;
+    }
+
+    .soziale-links {
+      margin-top: 15px;
+    }
+
+    .linkedin-symbol,
+    .email-symbol {
+      display: inline-block;
+      margin-right: 10px;
+      width: 32px;
+      height: 32px;
+      background: white;
+      color: #0077b5;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+
+    .email-symbol {
+      color: #B74137;
+    }
+
+    .Unsere-Partner h2 {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #111;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .Unsere-Partner {
+      max-width: 1800px;
+      margin: 100px auto 100px;
+      text-align: center;
+    }
+
+    .Unsere-Partner .unterstreichung {
+      width: 750px;
+      max-width: 90%;
+      height: 3px;
+      background: #ddd6d6;
+      margin: 14px auto 8px;
+    }
+
+    .Image-Container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      flex-wrap: wrap;
+      
+
+      padding-bottom: 30px;
+    }
+
+    .Image-Container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+
+    .footer-Kontaktform {
+      background-image: url(https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/Frame-201.png);
+      width: 100%;
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .Kontaktform h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .Kontaktform p {
+      color: #f0eeee;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .Kontaktform {
+      width: 100%;
+      max-width: 750px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      color: #e3e3e3;
+    }
+
+    .Kontaktform input {
+      padding: 12px;
+      border: none;
+      border-radius: 15px;
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      background-color: #e3e3e3;
+    }
+
+    .Kontaktform textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 15px;
+      width: 100%;
+      height: 120px;
+      resize: vertical;
+      background-color: #e3e3e3;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+
+    .Kontaktform button {
+      width: 180px;
+      height: 70px;
+      margin: 10px auto 0;
+      padding: 20px 0;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 40px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .Ganze-Footer-Unten {
+      background-color: #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .Logo-Footer {
+      padding-top: 50px;
+      width: 125px;
+      height: auto;
+    }
+
+    .Footer-Links p {
+      padding-top: 20px;
+      padding-bottom: 200px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+
+    .Footer-Mitte h1 {
+      padding-top: 50px;
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .Footer-Mitte a {
+      font-size: 22px;
+      display: block;
+      margin: 6px 0;
+      color: #e5e4e4;
+      text-decoration: none;
+      padding: 8px 0;
+    }
+
+    .Footer-Links {
+      text-align: left;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .Footer-Mitte {
+      text-align: left;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .Footer-Rechts {
+      text-align: left;
+      color: #ffffff;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .Footer-Rechts h3 {
+      padding-top: 50px;
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .Footer-Rechts p {
+      color: #e5e4e4;
+      font-size: 20px;
+    }
+
+    .Footer-Rechts p#Titel-Kontakt {
+      font-size: 25px;
+      margin-bottom: 12px;
+      padding-top: 15px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .Footer-Rechts p#E-Mail {
+      color: #ffffff;
+    }
+
+    .fa-brands.fa-footer {
+      font-size: 40px;
+      color: #000000;
+      margin-right: 20px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      height: 65px;
+      width: 65px;
+      padding-top: 13px;
+      padding-left: 15px;
+
+    }
+
+    .Rote-Balken {
+      background-color: #db0101;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .Balken-Links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+
+
+    .Balken-Mitte {
+      text-align: center;
+    }
+
+    .Balken-Rechts {
+      text-align: right;
+    }
+
+    .Balken-Rechts img {
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+
+    .Ganze-Footer-Unten {
+      gap: 32px;
+      padding: 18px 18px;
+    }
+
+    .Logo-Footer {
+      padding-top: 26px;
+      width: 92px;
+    }
+
+    .Footer-Links p {
+      padding-top: 12px;
+      padding-bottom: 90px;
+      font-size: 15px;
+    }
+
+    .Footer-Mitte h1 {
+      padding-top: 26px;
+      font-size: 20px;
+    }
+
+    .Footer-Mitte a {
+      font-size: 16px;
+      padding: 5px 0;
+    }
+
+    .Footer-Rechts h3 {
+      padding-top: 26px;
+      font-size: 20px;
+    }
+
+    .Footer-Rechts p {
+      font-size: 15px;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .Footer-Rechts p#Titel-Kontakt {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .Footer-Rechts p#Titel-Kontakt+p+p {
+      margin-top: 18px;
+    }
+
+    .Footer-Rechts p#E-Mail {
+      margin-top: 18px;
+    }
+
+    .fa-brands.fa-footer {
+      font-size: 28px;
+      margin-right: 12px;
+      height: 46px;
+      width: 46px;
+      padding-top: 9px;
+      padding-left: 11px;
+    }
+
+    .Footer-Mitte a.active-footer {
+      border-bottom: 2px solid #d9534f;
+      color: #d9534f;
+    }
+
+    
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 32px;
+      }
+
+      .ereignis-innen {
+        flex-direction: column !important;
+        padding: 0 20px !important;
+      }
+
+      .zeitstrahl::before,
+      .zeitstrahl-rot {
+        left: 20px;
+        transform: none;
+      }
+
+      .punkt {
+        left: 20px;
+        transform: translateY(-50%);
+      }
+
+      .ereignis-inhalt {
+        padding: 0;
+        margin-left: 50px;
+      }
+
+      .team-mitglied {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .abschlusstext {
+        padding: 30px 20px;
+        font-size: 16px;
+      }
+    }
+
+    :root {
+      --kopfhoehe: 85px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      padding-top: var(--kopfhoehe);
+    }
+
+    .menü-button {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+
+    .menü-icon {
+      position: relative;
+      width: 26px;
+      height: 2px;
+      background: #000;
+      display: block;
+      transition: background 0.2s ease;
+    }
+
+    .menü-icon::before,
+    .menü-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 26px;
+      height: 2px;
+      background: #000;
+      transition: transform 0.2s ease, top 0.2s ease;
+    }
+
+    .menü-icon::before {
+      top: -8px;
+    }
+
+    .menü-icon::after {
+      top: 8px;
+    }
+
+    body.menü-offen .menü-icon {
+      background: transparent;
+    }
+
+    body.menü-offen .menü-icon::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    body.menü-offen .menü-icon::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: 1024px) {
+      header nav {
+        padding: 12px 24px;
+      }
+
+      header nav ul {
+        gap: 28px;
+      }
+
+      .logo {
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gönner-balken {
+        display: none;
+      }
+
+      .menü-button {
+        display: inline-flex;
+      }
+
+      header nav {
+        padding: 12px 16px;
+      }
+
+      header nav ul {
+        position: fixed;
+        top: var(--kopfhoehe);
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 16px 18px;
+        display: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 999;
+      }
+
+      body.menü-offen header nav ul {
+        display: flex;
+      }
+
+      header nav ul li {
+        padding: 8px 0;
+      }
+
+      header nav a:not(.Logo-a) {
+        font-size: 16px;
+        padding: 10px 0;
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="gönner-balken" href="Gönner-in_werden.html"><span>Gönner*in werden</span></a>
+
+  <header>
+    <nav>
+      <div class="Logo-div-Nav">
+        <a class="Logo-a" href="index.html">
+          <img src="logo-san.webp" alt="Swiss Albanian Network" class="logo">
+        </a>
+      </div>
+
+      <button class="menü-button" id="menueButton" type="button" aria-controls="hauptmenue" aria-expanded="false"
+        aria-label="Menü öffnen">
+        <span class="menü-icon" aria-hidden="true"></span>
+      </button>
+
+      <ul id="hauptmenue">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="aktiv">Über den Verein</a></li>
+        <li><a href="benefits.html">Vorteile</a></li>
+        <li><a href="events.html">Veranstaltungen</a></li>
+        <li><a href="Gönner-in_werden.html">Gönner*in werden</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="Live-Bild">
+    <img src="https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/dabed64ba8917425b33c1d3d984997c336daaec4.gif"
+      alt="Live-Hintergrundbild" style="width: 100%; height: auto;">
+  </section>
+
+  
+  <div class="behaelter">
+    <div class="abschnitt">
+      <h2>Unsere Story</h2>
+      <p class="untertitel">Swiss Albanian Network: Gemeinschaft, Wachstum und <br> Zusammenhalt</p>
+      <div class="trennlinie"></div>
+
+      <div class="zeitstrahl">
+        <div class="punkt"></div>
+        <div class="zeitstrahl-rot"></div>
+
+        <div class="ereignis links">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">November 2019</div>
+              <p>Unsere Geschichte begann im November 2019, als Florent auf einen LinkedIn-Beitrag von Lorent Caravaku
+                stiess. Lorent lebte damals in Frankreich an der Grenze zur Schweiz und erkundigte sich in der Community
+                nach einem Treffpunkt für Albaner in Basel. Obwohl sein Beitrag zahlreiche Likes, aber keine Kommentare
+                erhielt, weckte dies Florents Entschlossenheit. Entschlossen, die Initiative zu ergreifen, organisierte
+                Florent kurzerhand einen spontanen Event in Basel und kontaktierte alle, die Lorents Beitrag geliked
+                hatten. Bei diesem ersten Treffen kamen knapp 25 Menschen zusammen, und die Nachfrage nach solchen
+                Events wuchs rasant. Unterstützt wurde er hier von Marigona & Arbnore Marku.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ereignis rechts">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">Dezember 2019</div>
+              <p>Am gleichen Abend wurde ein weiteres Treffen in Zürich in der News Bar direkt am Hauptbahnhof
+                organisiert, welches am 06. Dezember 2019 stattfand, dass mehr als 50 Teilnehmer anzog. Die Begeisterung
+                und das Gemeinschaftsgefühl führten schliesslich dazu, dass im Dezember 2019 der Grundstein für unseren
+                Verein gelegt wurde. Mit Statuten und Sitz in Einsiedeln SZ war der Beginn zwar spontan, aber aus diesem
+                Keim sollte etwas Bedeutendes wachsen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ereignis links">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">Februar 2020</div>
+              <p>Leider wurde unser Wachstum abrupt durch die Pandemie gebremst, nach einem beeindruckenden Event im
+                Februar 2020 im Hotel Leoneck in Zürich mit über 150 Gästen. Doch auch in diesen schwierigen Zeiten
+                hielten wir zusammen und bemühten uns, die Gemeinschaft aufrechtzuerhalten. Das Jahr 2021 und das erste
+                halbe Jahr 2022 waren eine Herausforderung, aber wir gaben nicht auf.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ereignis rechts">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">Sommer 2022</div>
+              <p>Im Sommer 2022 ergriffen Betinë Baleci und Laura Sopa die Initiative, indem sie einen Event in Zürich
+                Seebach initiierten, der das Swiss Albanian Network wiederbelebte. Während dieser Zeit der Pause
+                entwickelten wir neue Wege, wie wir unserer Community etwas zurückgeben könnten. Gemeinsam mit Linda
+                Hyseni und Flamur Lataj entstand die Gönnerschaft bei Swiss Albanian Network sowie Kooperationen mit
+                Unternehmen wie Beauty2Go, Hairless, Kenny's, Sixt und vielen mehr.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ereignis links">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">Juni 2023</div>
+              <p>Das Jahr 2023 brachte einen weiteren Meilenstein, als unsere Events im Lady Hamilton Pub stattfanden
+                und über 200 Gäste anzogen. Wir sind stolz darauf, zu sehen, was Mitglieder unserer Community erreichen
+                können.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ereignis rechts">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">April 2025</div>
+              <p>Im April 2025 setzten wir ein starkes Zeichen für Zusammenarbeit: Zum ersten Mal organisierten das
+                Swiss Albanian Network und Swissalbs gemeinsam einen After Work Drink – mitten in Zürich, in der
+                charmanten Café Mini Bar. Über 130 Gäste folgten der Einladung und füllten die Bar mit Gesprächen,
+                Lachen und echter Community-Energie. Was uns alle verband? Albanische Wurzeln, ein offener Austausch –
+                und der Wunsch, sich unter Gleichgesinnten zu vernetzen. Die Café Mini Bar bot mit ihrem urbanen,
+                persönlichen Flair den perfekten Rahmen für einen gelungenen Feierabend. Ein Abend ohne steifes
+                Programm, dafür mit umso mehr Herz, Authentizität und neuen Begegnungen. Ein herzliches Dankeschön an
+                Swissalbs für die tolle Zusammenarbeit – und an alle, die diesen Abend möglich gemacht haben.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ereignis links">
+          <div class="ereignis-innen">
+            <div class="ereignis-inhalt versteckt">
+              <div class="jahr">Juni 2025</div>
+              <p>Im Juni 2025 durften wir in London eine besondere Ehre entgegennehmen: Das Swiss Albanian Network wurde
+                von der Albanian Union UK mit dem "Professional Excellence Award" ausgezeichnet – als Anerkennung für
+                unsere Arbeit, unseren Aufbau und unseren Beitrag zur albanischen Diaspora in der Schweiz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="abschlusstext">
+      <p>Sei gespannt, denn unsere Geschichte entwickelt sich weiter. Wir sind hier, um die Verbindung zwischen der <br>
+        schweizerischen und albanischen Kultur zu stärken und Möglichkeiten für Zusammenarbeit und Wachstum zu <br>
+        schaffen. Willkommen bei Swiss Albanian Network!</p>
+    </div>
+
+    
+    <div class="abschnitt">
+      <h2>Unser Team</h2>
+      <p class="untertitel">Lerne unser talentiertes, fleissiges Team kennen</p>
+
+      <div class="team-umhuellung">
+        
+        <div class="team-mitglied">
+          <img src="https://swissalbaniannetwork.ch/wp-content/uploads/2025/01/DSC07882_1-scaled.jpg"
+            alt="Florent Hasani">
+          <div class="überlagerung">
+            <h3>Florent Hasani</h3>
+            <p>Vorstandsmitglied<br>Gründer</p>
+            <p><strong>zurichnetgroup AG</strong><br>Senior Business Consultant</p>
+            <div class="soziale-links">
+              <a href="https://linkedin.com/in/florenthasani" target="_blank" class="linkedin-symbol">in</a>
+              <a href="mailto:florent@swissalbaniannetwork.ch" class="email-symbol">@</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="team-mitglied">
+          <img src="https://swissalbaniannetwork.ch/wp-content/uploads/2025/01/DSC07876_1-scaled.jpg"
+            alt="Blertë Hasani">
+          <div class="überlagerung">
+            <h3>Blertë Hasani</h3>
+            <p>Vorstandsmitglied</p>
+            <p><strong>Migrolino Einsiedeln</strong><br>Stv. Geschäftsführerin</p>
+            <div class="soziale-links">
+              <a href="mailto:welcome@swissalbaniannetwork.ch" class="email-symbol">@</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="team-mitglied">
+          <img src="https://swissalbaniannetwork.ch/wp-content/uploads/2025/07/Latife_Vorstand.jpg" alt="Latife Namani">
+          <div class="überlagerung">
+            <h3>Latife Namani</h3>
+            <p>Vorstandsmitglied</p>
+            <p><strong>Inhaberin Namani Media</strong><br>CEO</p>
+            <div class="soziale-links">
+              <a href="https://www.linkedin.com/in/latife-namani-9ab471253/" target="_blank"
+                class="linkedin-symbol">in</a>
+              <a href="mailto:patrik.sopi@swissalbaniannetwork.ch" class="email-symbol">@</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="team-mitglied">
+          <img src="https://swissalbaniannetwork.ch/wp-content/uploads/2025/01/DSC08182_1-scaled.jpg"
+            alt="Saranda Dervisholli">
+          <div class="überlagerung ">
+            <h3>Saranda Dervisholli</h3>
+            <p><strong>MINDandMOVEMENT</strong><br>Gründerin</p>
+            <div class="soziale-links">
+              <a href="https://linkedin.com/in/saranda-dervisholli-7a471411a" target="_blank"
+                class="linkedin-symbol">in</a>
+              <a href="mailto:welcome@swissalbaniannetwork.ch" class="email-symbol">@</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="team-mitglied">
+          <img src="https://swissalbaniannetwork.ch/wp-content/uploads/2025/06/DSC07849_1-scaled-1.jpg"
+            alt="Patrik Sopi">
+          <div class="überlagerung">
+            <h3>Patrik Sopi</h3>
+            <p>Vorstandsmitglied</p>
+            <p><strong>Inhaber Codexo GmbH</strong><br>CEO</p>
+            <div class="soziale-links">
+              <a href="https://www.linkedin.com/in/patrik-sopi-b466341a5/" target="_blank"
+                class="linkedin-symbol">in</a>
+              <a href="mailto:patrik.sopi@swissalbaniannetwork.ch" class="email-symbol">@</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <section class="Unsere-Partner">
+      <h2>Unsere Partner</h2>
+      <div class="unterstreichung"></div>
+
+      <div class="Image-Container">
+        <a href="https://www.zurichnetgroup.ch/"><img src="zurichnetgroup_LOGO.png" alt="Logo-zurichnetgroup"
+            width="275"></a>
+        <a href="https://codexo.ch/"><img src="Codexo_LOGO.png" alt="Logo-Codexo" width="275"></a>
+        <a href="https://www.exojop.ch/"><img src="exojop_LOGO.webp" alt="Logo-exojop" width="275"></a>
+        <a href="https://taulanthaxhisefa.com/"><img src="Tauland_LOGO.png" alt="Logo-Tauland" width="275"></a>
+        <img src="NamaniMedia_LOGO.png" alt="Logo-NamaniMedia" width="275">
+      </div>
+
+      <h2>Unsere Medienpartner</h2>
+      <div class="unterstreichung"></div>
+
+      <div class="Image-Container">
+        <img src="eriscom_LOGO.webp" alt="Logo-eriscom" width="275">
+        <img src="albinfo_LOGO.webp" alt="Logo-albinfo" width="275">
+      </div>
+    </section>
+
+    <section>
+      <div class="footer-Kontaktform">
+        <form class="Kontaktform">
+          <h2>Kontakt</h2>
+          <p>Hast Du Fragen zu unserem Netzwerk? <br>Kontaktiere uns jederzeit!</p>
+          <input type="text" id="Vorname" name="Vorname" placeholder="Vorname" required>
+          <input type="text" id="Name" name="Name" placeholder="Name" required>
+          <input type="email" id="Email" name="Email" placeholder="E-Mail" required>
+          <input type="tel" id="Nummer" name="Nummer" placeholder="Telefonnummer" required>
+          <textarea id="message" name="message" placeholder="Nachricht" required></textarea>
+          <button type="submit">Senden</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="Footer-Unten">
+      <div class="Ganze-Footer-Unten">
+        <div class="Footer-Links">
+          <img src="swiss-albanian-network-logo-final-1-Footer.webp" alt="Logo-Footer" class="Logo-Footer">
+          <p>Eine Plattform, um alle in der Schweiz lebenden <br>Albaner zusammenzubringen</p>
+        </div>
+        <div class="Footer-Mitte">
+          <h1>Links</h1>
+          <a href="index.html">Home</a>
+          <a href="about.html">Über den Verein</a>
+          <a href="benefits.html">Vorteile</a>
+          <a href="events.html">Veranstaltungen</a>
+          <a href="Gönner-in_werden.html">Gönner*in werden</a>
+        </div>
+        <div class="Footer-Rechts">
+          <h3>Soziale Medien</h3>
+          <div class="Social-Media-Icons">
+            <a href="https://www.instagram.com/swissalbaniannetwork/"><i
+                class="fa-brands fa-footer fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/swiss-albanian-network/"><i
+                class="fa-brands fa-footer fa-linkedin-in"></i></a>
+          </div>
+          <p id="Titel-Kontakt">Kontakt</p>
+          <p>Swiss Albanian Network <br>8840 Einsiedeln</p>
+          <p>+41 79 663 77 77</p>
+          <p id="E-Mail">welcome@swissalbaniannetwork.ch</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Rote-Balken">
+      <div class="Balken-Links">
+        <a href="https://swissalbaniannetwork.ch/wp-content/uploads/2024/01/Verein_Statuten.pdf">Statuten</a>|<a
+          href="impressum.html">Impressum</a>|<a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="Balken-Mitte">
+        <a href="https://taulanthaxhisefa.com/" style="color: white; text-decoration: none;">Designed by T.H</a>
+      </div>
+      <div class="Balken-Rechts">
+        <a href="https://codexo.ch/"><img src="Codexo-Rotes-Balken-Logo.png" alt="Codexo-Rotes-Balken-Logo" width="30"
+            height="auto"></a>Webseite erstellt von Codexo GmbH
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    function punktPositionAktualisieren() {
+      const zeitstrahl = document.querySelector('.zeitstrahl');
+      const punkt = document.querySelector('.punkt');
+      const roteLinie = document.querySelector('.zeitstrahl-rot');
+      const ereignisse = document.querySelectorAll('.ereignis');
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const zeitstrahlOben = zeitstrahl.getBoundingClientRect().top + window.scrollY;
+
+      let naechstes = null;
+      let minAbstand = Infinity;
+      let aktivOben = 0;
+
+      ereignisse.forEach(ereignis => {
+        const box = ereignis.getBoundingClientRect();
+        const ereignisMitte = box.top + window.scrollY + box.height / 2;
+        const abstand = Math.abs(scrollPosition - ereignisMitte);
+
+        if (abstand < minAbstand) {
+          minAbstand = abstand;
+          naechstes = ereignis;
+          aktivOben = ereignisMitte - zeitstrahlOben;
+        }
+      });
+
+      punkt.style.top = `${aktivOben}px`;
+      roteLinie.style.height = `${aktivOben + punkt.offsetHeight / 2}px`;
+
+      ereignisse.forEach(ereignis => {
+        const inhalt = ereignis.querySelector('.ereignis-inhalt');
+        if (ereignis === naechstes) {
+          inhalt.classList.remove('versteckt');
+        } else {
+          inhalt.classList.add('versteckt');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', punktPositionAktualisieren);
+    window.addEventListener('load', () => {
+      setTimeout(punktPositionAktualisieren, 50);
+    });
+  </script>
+
+  <script>
+    (() => {
+      const button = document.getElementById('menueButton');
+      const menue = document.getElementById('hauptmenue');
+      if (!button || !menue) return;
+
+      const setOpen = (open) => {
+        document.body.classList.toggle('menü-offen', open);
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        button.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      };
+
+      button.addEventListener('click', () => {
+        setOpen(!document.body.classList.contains('menü-offen'));
+      });
+
+      menue.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) setOpen(false);
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
